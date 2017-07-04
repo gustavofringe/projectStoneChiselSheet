@@ -2,12 +2,13 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+ @import "compass/css3/transform";
 @font-face {
-    font-family: "hardeststyle";
-    src: url('../fonts/HardestStyleDemo.ttf');
+    font-family: "personal";
+    src: url('../fonts/PersonalServices.ttf');
 }
 html,body{
-  font-family: "hardeststyle";
+  font-family: "personal";
   margin: 0;
   padding: 0;
 }
@@ -28,9 +29,37 @@ header {
   }
 }
 main{
+  margin-left: 10px;
+  display: flex;
+  h2{
+      font-size: 10px;
+    }
   .elements-user{
+    
     img{
-      width: 100px;
+      display: block
+    }
+  }
+  .elements-computer{
+    img{
+      @include transform (rotate(25deg));
+      display: block
+    }
+  }
+  form{
+    display: flex;
+    margin-top: 25px;
+    .form{
+      label{
+        font-size: 10px;
+      }
+      label,input{
+        display: block;
+      }
+      input{
+        width: 15px;
+        margin: 0 auto;
+      }
     }
   }
 }

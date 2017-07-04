@@ -3,26 +3,26 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @font-face {
-  font-family: "hardeststyle";
-  src: url("../fonts/HardestStyleDemo.ttf");
+  font-family: "personal";
+  src: url("../fonts/PersonalServices.ttf");
 }
-/* line 9, ../sass/style.scss */
+/* line 10, ../sass/style.scss */
 html, body {
-  font-family: "hardeststyle";
+  font-family: "personal";
   margin: 0;
   padding: 0;
 }
 
-/* line 14, ../sass/style.scss */
+/* line 15, ../sass/style.scss */
 header {
   overflow: hidden;
   background-color: #E82C0C;
 }
-/* line 17, ../sass/style.scss */
+/* line 18, ../sass/style.scss */
 header h1 {
   text-align: center;
 }
-/* line 20, ../sass/style.scss */
+/* line 21, ../sass/style.scss */
 header #player {
   width: 550px;
   height: 100px;
@@ -33,7 +33,42 @@ header #player {
   font-size: 25px;
 }
 
-/* line 32, ../sass/style.scss */
+/* line 31, ../sass/style.scss */
+main {
+  margin-left: 10px;
+  display: flex;
+}
+/* line 34, ../sass/style.scss */
+main h2 {
+  font-size: 10px;
+}
+/* line 39, ../sass/style.scss */
 main .elements-user img {
-  width: 100px;
+  display: block;
+}
+/* line 44, ../sass/style.scss */
+main .elements-computer img {
+  -moz-transform: rotate(25deg);
+  -ms-transform: rotate(25deg);
+  -webkit-transform: rotate(25deg);
+  transform: rotate(25deg);
+  display: block;
+}
+/* line 49, ../sass/style.scss */
+main form {
+  display: flex;
+  margin-top: 25px;
+}
+/* line 53, ../sass/style.scss */
+main form .form label {
+  font-size: 10px;
+}
+/* line 56, ../sass/style.scss */
+main form .form label, main form .form input {
+  display: block;
+}
+/* line 59, ../sass/style.scss */
+main form .form input {
+  width: 15px;
+  margin: 0 auto;
 }
