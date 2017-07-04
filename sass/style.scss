@@ -2,5 +2,35 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
-@import "compass/reset";
+@font-face {
+    font-family: "hardeststyle";
+    src: url('../fonts/HardestStyleDemo.ttf');
+}
+html,body{
+  font-family: "hardeststyle";
+  margin: 0;
+  padding: 0;
+}
+header {
+  overflow: hidden;
+  background-color: #E82C0C;
+  h1{
+    text-align: center;
+  }
+  #player {
+    width: 550px;
+    height: 100px;
+    line-height:100px;
+    margin: 0 auto;
+    color: #0D6BFF;
+    text-align: center;
+    font-size:25px;
+  }
+}
+main{
+  .elements-user{
+    img{
+      width: 100px;
+    }
+  }
+}
