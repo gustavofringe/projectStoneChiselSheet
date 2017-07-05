@@ -20,9 +20,9 @@
         <main>
             <div class="elements-user">
                 <h2>Choisissez votre element</h2>
-                <img src="img/ciseaux_s.png" alt="ciseaux">
-                <img src="img/pierre_s.png" alt="pierre">
-                <img src="img/feuille_s.png" alt="feuille">
+                <img id="scissors" onclick="scissor()" src="img/ciseaux_s.png" alt="ciseaux">
+                <img id="rock" src="img/pierre_s.png" alt="pierre">
+                <img id="leaf" src="img/feuille_s.png" alt="feuille">
             </div>
             <form action="post" >
                 <div class="form">
@@ -34,11 +34,12 @@
                 <input type="text" id="computer" name="computer">
                 </div>
             </form>
+            <div id="result"></div>
             <div class="elements-computer">
                 <h2>Choix Ordinateur</h2>
-                <img src="img/ciseaux_s.png" alt="ciseaux">
-                <img src="img/pierre_s.png" alt="pierre">
-                <img src="img/feuille_s.png" alt="feuille">
+                <img id="scissorsC" src="img/ciseaux_s.png" alt="ciseaux">
+                <img id="rockC" src="img/pierre_s.png" alt="pierre">
+                <img id="leafC" src="img/feuille_s.png" alt="feuille">
             </div>
         </main>
         <footer>
