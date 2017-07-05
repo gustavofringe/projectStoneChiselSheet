@@ -141,6 +141,36 @@ computerChoice(null,computerChance,userChance,'Match null','L\'ordi gagne','Vous
 computerChoice(computerChance,userChance,null,'ordi gagne','vous gagne','match null');
 
     }
+    /**
+     *
+     * stone function
+     * @return user choice onclick
+     *
+     * */
+    var stone = function () {
+        leaf.style.bottom = null;
+        leaf.style.left = null;
+        scissors.style.bottom = null;
+        scissors.style.left = null;
+        var elem = rock;
+        var pos = 0;
+        var id = setInterval(frame, 9);
+
+        function frame() {
+            if (pos == 120) {
+                elem.classList.remove('translateAnimationClass');
+                clearInterval(id);
+            } else {
+
+                elem.classList.add('translateAnimationClass');
+                pos++;
+                elem.style.top = '20px';
+                elem.style.left = pos + 'px';
+            }
+        }
+computerChoice(userChance,null,computerChance,'vous gagne','match null','ordi gagne');
+
+    }
 
 
 /*leaf.addEventListener('click', function () {
