@@ -20,7 +20,7 @@ var userChance = 0;
      * @return result of computer choice
      *
      * */
-    var computerChoice = function(c,p,f,msgc,msgp,msgf){
+    var computerChoice = function (c, p, f, msgc, msgp, msgf) {
         if (computer === 'ciseaux') {
             computer = document.getElementById('scissorsC');
             var elemC = computer;
@@ -88,10 +88,8 @@ var userChance = 0;
      *
      * */
     var scissor = function () {
-        rock.style.bottom = null;
-        rock.style.left = null;
-        leaf.style.bottom = null;
-        leaf.style.left = null;
+        leaf.classList.add('unclickable');
+        rock.classList.add('unclickable');
         var elem = scissors;
         var pos = 0;
         var id = setInterval(frame, 9);
@@ -108,7 +106,8 @@ var userChance = 0;
                 elem.style.left = pos + 'px';
             }
         }
-computerChoice(null,computerChance,userChance,'Match null','L\'ordi gagne','Vous gagne');
+
+        computerChoice(null, computerChance, userChance, 'Match null', 'L\'ordi gagne', 'Vous gagne');
 
     }
     /**
@@ -118,10 +117,8 @@ computerChoice(null,computerChance,userChance,'Match null','L\'ordi gagne','Vous
      *
      * */
     var hand = function () {
-        rock.style.bottom = null;
-        rock.style.left = null;
-        scissors.style.bottom = null;
-        scissors.style.left = null;
+        scissors.classList.add('unclickable');
+        rock.classList.add('unclickable');
         var elem = leaf;
         var pos = 0;
         var id = setInterval(frame, 9);
@@ -138,7 +135,8 @@ computerChoice(null,computerChance,userChance,'Match null','L\'ordi gagne','Vous
                 elem.style.left = pos + 'px';
             }
         }
-computerChoice(computerChance,userChance,null,'ordi gagne','vous gagne','match null');
+
+        computerChoice(computerChance, userChance, null, 'ordi gagne', 'vous gagne', 'match null');
 
     }
     /**
@@ -148,67 +146,33 @@ computerChoice(computerChance,userChance,null,'ordi gagne','vous gagne','match n
      *
      * */
     var stone = function () {
-        leaf.style.bottom = null;
-        leaf.style.left = null;
-        scissors.style.bottom = null;
-        scissors.style.left = null;
-        var elem = rock;
-        var pos = 0;
-        var id = setInterval(frame, 9);
+        leaf.classList.add('unclickable');
+        scissors.classList.add('unclickable');
 
-        function frame() {
-            if (pos == 120) {
-                elem.classList.remove('translateAnimationClass');
-                clearInterval(id);
-            } else {
+            leaf.style.bottom = null;
+            leaf.style.left = null;
+            scissors.style.bottom = null;
+            scissors.style.left = null;
+            var elem = rock;
+            var pos = 0;
+            var id = setInterval(frame, 9);
 
-                elem.classList.add('translateAnimationClass');
-                pos++;
-                elem.style.top = '20px';
-                elem.style.left = pos + 'px';
+            function frame() {
+                if (pos == 120) {
+                    elem.classList.remove('translateAnimationClass');
+                    clearInterval(id);
+                } else {
+
+                    elem.classList.add('translateAnimationClass');
+                    pos++;
+                    elem.style.top = '20px';
+                    elem.style.left = pos + 'px';
+                }
             }
-        }
-computerChoice(userChance,null,computerChance,'vous gagne','match null','ordi gagne');
+
+            computerChoice(userChance, null, computerChance, 'vous gagne', 'match null', 'ordi gagne');
 
     }
 
-
-/*leaf.addEventListener('click', function () {
-
-    var elem = leaf;
-    var pos = 0;
-    var id = setInterval(frame, 9);
-
-    function frame() {
-        if (pos == 105) {
-            elem.classList.remove('translateAnimationClass');
-            clearInterval(id);
-        } else {
-
-            elem.classList.add('translateAnimationClass');
-            pos++;
-            elem.style.bottom = pos + 'px';
-            elem.style.left = pos + 'px';
-        }
-    }
-})
-rock.addEventListener('click', function () {
-    var elem = rock;
-    var pos = 0;
-    var id = setInterval(frame, 9);
-
-    function frame() {
-        if (pos == 90) {
-            elem.classList.remove('translateAnimationClass');
-            clearInterval(id);
-        } else {
-
-            elem.classList.add('translateAnimationClass');
-            pos++;
-            elem.style.bottom = pos + 'px';
-            elem.style.left = pos + 'px';
-        }
-    }
-})*/
 
 

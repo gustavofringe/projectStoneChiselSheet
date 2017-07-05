@@ -91,6 +91,10 @@ main form .form input {
   margin: 0 auto;
 }
 /* line 81, ../sass/style.scss */
+main .unclickable {
+  pointer-events: none;
+}
+/* line 84, ../sass/style.scss */
 main #result {
   position: absolute;
   top: 300px;
