@@ -11,42 +11,50 @@ html, body {
   font-family: "personal";
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
-/* line 15, ../sass/style.scss */
+/* line 17, ../sass/style.scss */
 header {
   overflow: hidden;
   background-color: #E82C0C;
 }
-/* line 18, ../sass/style.scss */
+/* line 20, ../sass/style.scss */
 header h1 {
   text-align: center;
 }
-/* line 21, ../sass/style.scss */
+/* line 23, ../sass/style.scss */
 header #player {
-  width: 550px;
-  height: 100px;
+  width: 300px;
+  height: 200px;
   line-height: 100px;
   margin: 0 auto;
   color: #0D6BFF;
   text-align: center;
   font-size: 25px;
 }
+/* line 33, ../sass/style.scss */
+header #result {
+  width: 200px;
+  margin: 0 auto;
+}
 
-/* line 31, ../sass/style.scss */
+/* line 38, ../sass/style.scss */
 main {
   margin-left: 10px;
   display: flex;
+  justify-content: space-around;
 }
-/* line 34, ../sass/style.scss */
+/* line 42, ../sass/style.scss */
 main h2 {
   font-size: 10px;
 }
-/* line 37, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 main .translateAnimationClass {
   -webkit-animation: rotation 2s infinite linear;
 }
-/* line 40, ../sass/style.scss */
+/* line 48, ../sass/style.scss */
 main .translateAnimationClassC {
   -webkit-animation: rotation 2s infinite;
 }
@@ -58,12 +66,12 @@ main .translateAnimationClassC {
     -webkit-transform: rotate(700deg);
   }
 }
-/* line 53, ../sass/style.scss */
+/* line 61, ../sass/style.scss */
 main .elements-user img {
   position: relative;
   display: block;
 }
-/* line 59, ../sass/style.scss */
+/* line 67, ../sass/style.scss */
 main .elements-computer img {
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -72,31 +80,25 @@ main .elements-computer img {
   position: relative;
   display: block;
 }
-/* line 65, ../sass/style.scss */
+/* line 73, ../sass/style.scss */
 main form {
   display: flex;
   margin-top: 25px;
 }
-/* line 69, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 main form .form label {
   font-size: 10px;
 }
-/* line 72, ../sass/style.scss */
+/* line 80, ../sass/style.scss */
 main form .form label, main form .form input {
   display: block;
 }
-/* line 75, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
 main form .form input {
   width: 15px;
   margin: 0 auto;
 }
-/* line 81, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 main .unclickable {
   pointer-events: none;
-}
-/* line 84, ../sass/style.scss */
-main #result {
-  position: absolute;
-  top: 300px;
-  left: 140px;
 }
