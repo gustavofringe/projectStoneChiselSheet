@@ -27,7 +27,7 @@ header h1 {
 /* line 23, ../sass/style.scss */
 header #player {
   width: 300px;
-  height: 200px;
+  height: 150px;
   line-height: 100px;
   margin: 0 auto;
   color: #0D6BFF;
@@ -36,13 +36,13 @@ header #player {
 }
 /* line 33, ../sass/style.scss */
 header #result {
+  text-align: center;
   width: 200px;
   margin: 0 auto;
 }
 
-/* line 38, ../sass/style.scss */
+/* line 39, ../sass/style.scss */
 main {
-  margin-left: 10px;
   display: flex;
   justify-content: space-around;
 }
@@ -101,4 +101,17 @@ main form .form input {
 /* line 89, ../sass/style.scss */
 main .unclickable {
   pointer-events: none;
+}
+/* line 92, ../sass/style.scss */
+main .move {
+  position: relative;
+  animation: mymove 4s linear 0s;
+}
+@-webkit-keyframes mymove {
+  from {
+    left: 100px;
+  }
+  to {
+    top: 0px;
+  }
 }

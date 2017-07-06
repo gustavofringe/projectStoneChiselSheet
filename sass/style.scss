@@ -22,7 +22,7 @@ header {
   }
   #player {
     width: 300px;
-    height: 200px;
+    height: 150px;
     line-height:100px;
     margin: 0 auto;
     color: #0D6BFF;
@@ -31,12 +31,12 @@ header {
   }
 
   #result{
+    text-align: center;
     width: 200px;
     margin: 0 auto;
   }
 }
 main{
-  margin-left: 10px;
   display: flex;
   justify-content: space-around;
   h2{
@@ -88,5 +88,13 @@ main{
   }
   .unclickable {
     pointer-events: none;
+  }
+  .move{
+    position: relative;
+    animation: mymove 4s linear 0s ;
+  }
+  @-webkit-keyframes mymove {
+    from {left: 100px;}
+    to {top: 0px;}
   }
 }

@@ -148,7 +148,10 @@ rock.onclick = function () {
     leaf.classList.add('unclickable');
     scissors.classList.add('unclickable');
     userChoice = this.alt;
-    var elem = rock;
+    rock.classList.add('translateAnimationClass');
+
+    rock.classList.add('move');
+    /*var elem = rock;
     var pos = 0;
     var id = setInterval(frame, 9);
     function frame() {
@@ -161,11 +164,17 @@ rock.onclick = function () {
             elem.style.top = '20px';
             elem.style.left = pos + 'px';
         }
-    }
+    }*/
+
     setTimeout(function () {
         computerChoice('vous gagne', 'match null', 'ordi gagne');
     }, 1500)
     winner();
+    setTimeout(function(){rock.classList.remove('move')},7000);
+    setTimeout(function(){leaf.classList.remove('unclickable')},7000);
+    setTimeout(function(){scissors.classList.remove('unclickable')},7000);
+    setTimeout(function(){rock.classList.remove('translateAnimationClass')},2000);
+
 }
 /**
  *
@@ -214,6 +223,10 @@ var print = function () {
         computerChance++;
         document.getElementById('computer').value = computerChance;
     }
+}
+var reset = function(){
+    this.id = id;
+    id.removeAttribute('style');
 }
 
 
