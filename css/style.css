@@ -45,12 +45,12 @@ header #player {
   *
   **/
   width: 300px;
-  height: 150px;
-  line-height: 100px;
+  height: 100px;
+  line-height: 40px;
   margin: 0 auto;
   color: #0D6BFF;
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
 }
 /* line 49, ../sass/style.scss */
 header #result {
@@ -318,8 +318,7 @@ main .unclickable {
   pointer-events: none;
 }
 /* line 211, ../sass/style.scss */
-main .win {
-  background-image: url("../img/39260137.gif");
+main .win, main .lose {
   background-repeat: no-repeat;
   background-size: 300px 200px;
   background-attachment: fixed;
@@ -332,18 +331,33 @@ main .win {
   top: 0;
   background-color: rgba(0, 0, 0, 0.8);
 }
-/* line 225, ../sass/style.scss */
+/* line 224, ../sass/style.scss */
+main .win {
+  background-image: url("../img/39260137.gif");
+}
+/* line 227, ../sass/style.scss */
 main .lose {
   background-image: url("../img/rivers-or-tears.gif");
-  background-repeat: no-repeat;
-  background-size: 300px 200px;
-  background-attachment: fixed;
-  background-position: center;
-  width: 100%;
+}
+/* line 230, ../sass/style.scss */
+main #replay {
   position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  left: 50%;
+  width: 100px;
+  margin-left: -50px;
+  text-align: center;
+  margin-top: 200px;
+  color: #944949;
+  cursor: crosshair;
+}
+
+/* line 241, ../sass/style.scss */
+footer {
+  background-color: #E82C0C;
+  height: 110px;
+}
+/* line 245, ../sass/style.scss */
+footer .container p {
+  padding-top: 50px;
+  text-align: center;
 }

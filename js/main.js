@@ -107,15 +107,21 @@ function generateComputer() {
     for (var i = 0; i < elements.length; i++) {
         computerChoice = elements[number];
     }
-    if(computerChoice === "feuille"){
+    if (computerChoice === "feuille") {
         leafComputer.classList.toggle('animateLeafComputer');
-        setTimeout(function(){leafComputer.classList.remove('animateLeafComputer');},3000)
-    }else if(computerChoice === "pierre"){
+        setTimeout(function () {
+            leafComputer.classList.remove('animateLeafComputer');
+        }, 3000)
+    } else if (computerChoice === "pierre") {
         rockComputer.classList.toggle('animateRockComputer');
-        setTimeout(function(){rockComputer.classList.remove('animateRockComputer');},3000)
-    }else if(computerChoice === "ciseaux"){
+        setTimeout(function () {
+            rockComputer.classList.remove('animateRockComputer');
+        }, 3000)
+    } else if (computerChoice === "ciseaux") {
         scissorsComputer.classList.toggle('animateScissorsComputer');
-        setTimeout(function(){scissorsComputer.classList.remove('animateScissorsComputer');},3000)
+        setTimeout(function () {
+            scissorsComputer.classList.remove('animateScissorsComputer');
+        }, 3000)
     }
 }
 /**
@@ -125,14 +131,14 @@ function generateComputer() {
  *
  */
 var winner = function () {
-    if (userChoice === computerChoice){
+    if (userChoice === computerChoice) {
         result.innerHTML = "match null";
     }
     if (userChoice === "feuille") {
         if (computerChoice === "pierre") {
             userWin = true;
             print();
-        }else if (computerChoice === "ciseaux") {
+        } else if (computerChoice === "ciseaux") {
             computerWin = true;
             print();
         }
@@ -141,7 +147,7 @@ var winner = function () {
         if (computerChoice === "pierre") {
             computerWin = true;
             print();
-        }else if (computerChoice === "feuille") {
+        } else if (computerChoice === "feuille") {
             userWin = true;
             print();
         }
@@ -150,7 +156,7 @@ var winner = function () {
         if (computerChoice === "feuille") {
             computerWin = true;
             print();
-        }else if (computerChoice === "ciseaux") {
+        } else if (computerChoice === "ciseaux") {
             userWin = true;
             print();
         }
@@ -178,7 +184,7 @@ var print = function () {
         userChance++;
         result.innerHTML = "vous gagne";
         document.getElementById('user').value = userChance;
-    }else if (computerWin == true) {
+    } else if (computerWin == true) {
         resetWinner();
         computerChance++;
         result.innerHTML = "ordi gagne";
@@ -192,14 +198,22 @@ var print = function () {
  *
  *
  * */
-var haveWin = function(){
-    if(userChance === 3){
-        setTimeout(function(){win.classList.add('win')},3000)
-        setTimeout(function(){win.insertAdjacentHTML('afterend', '<div id="rejouer" style="position:absolute;left:50%;width:100px;margin-left:-50px;text-align:center;margin-top:200px;color:#944949;cursor:crosshair;" onClick="window.location.reload()" class="animated tada">Rejouer ?</div>')},3000)
+var haveWin = function () {
+    if (userChance === 3) {
+        setTimeout(function () {
+            win.classList.add('win')
+        }, 3000)
+        setTimeout(function () {
+            win.insertAdjacentHTML('afterbegin', '<div id="replay" onClick="window.location.reload()">Rejouer</div>')
+        }, 3000)
     }
-    if(computerChance === 3){
-        setTimeout(function(){lose.classList.add('lose')},3000)
-        setTimeout(function(){lose.insertAdjacentHTML('afterend', '<div id="rejouer" style="position:absolute;left:50%;width:100px;margin-left:-50px;text-align:center;margin-top:200px;color:#944949;cursor:crosshair;" onClick="window.location.reload()" class="animated tada">Rejouer ?</div>')},3000)
+    if (computerChance === 3) {
+        setTimeout(function () {
+            lose.classList.add('lose')
+        }, 3000)
+        setTimeout(function () {
+            lose.insertAdjacentHTML('afterbegin', '<div id="replay" onClick="window.location.reload()">Rejouer</div>')
+        }, 3000)
     }
 }
 

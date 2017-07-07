@@ -39,12 +39,12 @@ header {
     *
     **/
     width: 300px;
-    height: 150px;
-    line-height:100px;
+    height: 100px;
+    line-height: 40px;
     margin: 0 auto;
     color: #0D6BFF;
     text-align: center;
-    font-size:25px;
+    font-size:20px;
   }
   #result{
     /*
@@ -208,8 +208,7 @@ main{
   .unclickable {
     pointer-events: none;
   }
-  .win{
-    background-image: url('../img/39260137.gif');
+  .win, .lose{
     background-repeat: no-repeat;
     background-size: 300px 200px;
     background-attachment: fixed;
@@ -222,18 +221,30 @@ main{
     top: 0;
     background-color: rgba(0,0,0,0.8);
   }
+  .win{
+    background-image: url('../img/39260137.gif');
+  }
   .lose{
     background-image: url('../img/rivers-or-tears.gif');
-    background-repeat: no-repeat;
-    background-size: 300px 200px;
-    background-attachment: fixed;
-    background-position: center;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    top: 0;
-    background-color: rgba(0,0,0,0.8);
+  }
+  #replay{
+    position:absolute;
+    left:50%;
+    width:100px;
+    margin-left:-50px;
+    text-align:center;
+    margin-top:200px;
+    color:#944949;
+    cursor:crosshair;
+  }
+}
+footer{
+  background-color: #E82C0C;
+  height: 110px;
+  .container{
+    p{
+      padding-top: 50px;
+      text-align: center;
+    }
   }
 }
