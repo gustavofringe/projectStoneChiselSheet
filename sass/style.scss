@@ -6,7 +6,12 @@
 @font-face {
     font-family: "personal";
     src: url('../fonts/PersonalServices.ttf');
-}
+}/*
+*
+*html,body
+*
+*
+*/
 html,body{
   font-family: "personal";
   margin: 0;
@@ -14,6 +19,12 @@ html,body{
   width: 100%;
   height: 100%;
 }
+/*
+*
+*header
+*
+*
+*/
 header {
   overflow: hidden;
   background-color: #E82C0C;
@@ -21,6 +32,12 @@ header {
     text-align: center;
   }
   #player {
+    /**
+    *
+    *
+    *player name
+    *
+    **/
     width: 300px;
     height: 150px;
     line-height:100px;
@@ -29,29 +46,76 @@ header {
     text-align: center;
     font-size:25px;
   }
-
   #result{
+    /*
+    *
+    *result
+    *
+    */
     text-align: center;
     width: 200px;
     margin: 0 auto;
   }
 }
+/*
+*
+*
+*main
+*
+*/
 main{
   display: flex;
   justify-content: space-around;
   h2{
       font-size: 10px;
     }
-  .translateAnimationClass {
-    animation-name: rotation, mymove;
+  .animateRock {
+    animation-name: rotation, rock;
     animation-duration: 2s, 2s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
     animation-play-state: unset;
     animation-fill-mode: forwards;
   }
-  .translateAnimationClassC {
-    -webkit-animation: rotation 2s infinite;
+  .animateLeaf {
+    animation-name: rotation, leaf;
+    animation-duration: 2s, 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-play-state: unset;
+    animation-fill-mode: forwards;
+  }
+  .animateScissors {
+    animation-name: rotation, scissors;
+    animation-duration: 2s, 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-play-state: unset;
+    animation-fill-mode: forwards;
+  }
+  .animateLeafComputer {
+    animation-name: rotationComputer, leafComputer;
+    animation-duration: 2s, 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-play-state: unset;
+    animation-fill-mode: forwards;
+  }
+  .animateRockComputer {
+    animation-name: rotationComputer, rockComputer;
+    animation-duration: 2s, 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-play-state: unset;
+    animation-fill-mode: forwards;
+  }
+  .animateScissorsComputer {
+    animation-name: rotationComputer, scissorsComputer;
+    animation-duration: 2s, 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-play-state: unset;
+    animation-fill-mode: forwards;
   }
 
   @-webkit-keyframes rotation {
@@ -59,24 +123,67 @@ main{
       -webkit-transform: rotate(0deg);
     }
     to {
-      -webkit-transform: rotate(700deg);
+      -webkit-transform: rotate(720deg);
     }
   }
-  @keyframes mymove {
+  @-webkit-keyframes rotationComputer {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(630deg);
+    }
+  }
+  @keyframes rock {
     0%{left:0;top:0}
     25%{left:25px;top:0}
     50%{left:50px;top:0}
-    75%{left:75;top:0}
+    75%{left:75px;top:0}
     100%{left:120px;top:20px}
   }
+  @keyframes leaf {
+    0%{left:0;bottom:0}
+    25%{left:25px;bottom:25px}
+    50%{left:50px;bottom:30px}
+    75%{left:75px;bottom:35px}
+    100%{left:120px;bottom:60px}
+  }
+  @keyframes scissors {
+    0%{left:0;top:0}
+    25%{left:25px;top:25px}
+    50%{left:50px;top:50px}
+    75%{left:75px;top:80px}
+    100%{left:120px;top:120px}
+  }
+  @keyframes rockComputer {
+    0%{right:0;top:0}
+    25%{right:25px;top:0}
+    50%{right:50px;top:0}
+    75%{right:75px;top:0}
+    100%{right:120px;top:20px}
+  }
+  @keyframes leafComputer {
+    0%{right:0;bottom:0}
+    25%{right:25px;bottom:25px}
+    50%{right:50px;bottom:50px}
+    75%{right:75px;bottom:60px}
+    100%{right:120px;bottom:70px}
+  }
+  @keyframes scissorsComputer {
+    0%{right:0;top:0}
+    25%{right:25px;top:25px}
+    50%{right:50px;top:50px}
+    75%{right:75px;top:80px}
+    100%{right:120px;top:120px}
+  }
   .elements-user{
-    img{
+    .animate{
       position: relative;
       display: block
     }
   }
   .elements-computer{
-    img{
+    .animate{
       @include transform (rotate(-90deg));
       position: relative;
       display: block

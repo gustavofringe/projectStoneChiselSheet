@@ -9,12 +9,15 @@ var userChance = 0;
 var userChoice;
 var userWin;
 var computerWin;
-
+var computerChoice;
 var elements = ["pierre", "feuille", "ciseaux"];
-var computer = elements[Math.floor(Math.random() * elements.length)];
 var scissors = document.getElementById('scissors');
 var leaf = document.getElementById('leaf');
 var rock = document.getElementById('rock');
+var scissorsComputer = document.getElementById('scissorsComputer');
+var rockComputer = document.getElementById('rockComputer');
+var leafcomputer = document.getElementById('leafComputer');
+var result = document.getElementById('result');
 document.getElementById('user').value = 0;
 document.getElementById('computer').value = 0;
 /**
@@ -23,7 +26,8 @@ document.getElementById('computer').value = 0;
  * @return result of computer choice
  *
  * */
-var computerChoice = function (msgc, msgp, msgf) {
+/*
+var computerChoices = function (msgc, msgp, msgf) {
     if (computer === 'ciseaux') {
         computer = document.getElementById('scissorsC');
         var elemC = computer;
@@ -64,25 +68,28 @@ var computerChoice = function (msgc, msgp, msgf) {
     if (computer === 'feuille') {
         computer = document.getElementById('leafC');
         computer.classList.add('translateAnimationClassC');
-        setTimeout(function(){computer.classList.toggle('translateAnimationClassC')},10000);
+        setTimeout(function () {
+            computer.classList.toggle('translateAnimationClassC')
+        }, 10000);
         document.getElementById('result').innerHTML = msgf;
         /*var elemL = computer;
-        var posL = 0;
-        var idL = setInterval(frameL, 9);
-        document.getElementById('result').innerHTML = msgf;
-        function frameL() {
-            if (posL == 120) {
-                elemL.classList.remove('translateAnimationClassC');
-                clearInterval(idL);
-            } else {
-                elemL.classList.add('translateAnimationClassC');
-                posL++;
-                elemL.style.bottom = '80px';
-                elemL.style.right = posL + 'px';
-            }
-        }*/
+         var posL = 0;
+         var idL = setInterval(frameL, 9);
+         document.getElementById('result').innerHTML = msgf;
+         function frameL() {
+         if (posL == 120) {
+         elemL.classList.remove('translateAnimationClassC');
+         clearInterval(idL);
+         } else {
+         elemL.classList.add('translateAnimationClassC');
+         posL++;
+         elemL.style.bottom = '80px';
+         elemL.style.right = posL + 'px';
+         }
+         }
     }
 }
+*/
 /**
  *
  * scissor function
@@ -93,24 +100,18 @@ scissors.onclick = function () {
     leaf.classList.add('unclickable');
     rock.classList.add('unclickable');
     userChoice = this.alt;
-    var elem = scissors;
-    var pos = 0;
-    var id = setInterval(frame, 9);
-    function frame() {
-        if (pos == 120) {
-            elem.classList.remove('translateAnimationClass');
-            clearInterval(id);
-        } else {
-            elem.classList.add('translateAnimationClass');
-            pos++;
-            elem.style.top = pos + 'px';
-            elem.style.left = pos + 'px';
-        }
-    }
-    setTimeout(function () {
-        computerChoice('Match null', 'L\'ordi gagne', 'Vous gagne');
-    }, 1500);
+    scissors.classList.add('animateScissors');
+    generateComputer();
     winner();
+    setTimeout(function () {
+        leaf.classList.toggle('unclickable')
+    }, 8000);
+    setTimeout(function () {
+        scissors.classList.toggle('animateScissors')
+    }, 8000);
+    setTimeout(function () {
+        rock.classList.toggle('unclickable')
+    }, 8000);
 }
 /**
  *
@@ -122,24 +123,18 @@ leaf.onclick = function () {
     scissors.classList.add('unclickable');
     rock.classList.add('unclickable');
     userChoice = this.alt
-    var elem = leaf;
-    var pos = 0;
-    var id = setInterval(frame, 9);
-    function frame() {
-        if (pos == 120) {
-            elem.classList.remove('translateAnimationClass');
-            clearInterval(id);
-        } else {
-            elem.classList.add('translateAnimationClass');
-            pos++;
-            elem.style.bottom = '80px';
-            elem.style.left = pos + 'px';
-        }
-    }
-    setTimeout(function () {
-        computerChoice('ordi gagne', 'vous gagne', 'match null');
-    }, 1500);
+    leaf.classList.add('animateLeaf');
+    generateComputer();
     winner();
+    setTimeout(function () {
+        leaf.classList.toggle('animateLeaf')
+    }, 8000);
+    setTimeout(function () {
+        scissors.classList.toggle('unclickable')
+    }, 8000);
+    setTimeout(function () {
+        rock.classList.toggle('unclickable')
+    }, 8000);
 }
 /**
  *
@@ -151,33 +146,42 @@ rock.onclick = function () {
     leaf.classList.add('unclickable');
     scissors.classList.add('unclickable');
     userChoice = this.alt;
-    rock.classList.add('translateAnimationClass');
-
-     /*rock.classList.add('move');/*
-    /*var elem = rock;
-    var pos = 0;
-    var id = setInterval(frame, 9);
-    function frame() {
-        if (pos == 120) {
-            elem.classList.remove('translateAnimationClass');
-            clearInterval(id);
-        } else {
-            elem.classList.add('translateAnimationClass');
-            pos++;
-            elem.style.top = '20px';
-            elem.style.left = pos + 'px';
-        }
-    }*/
-
-    setTimeout(function () {
-        computerChoice('vous gagne', 'match null', 'ordi gagne');
-    }, 1500)
+    rock.classList.add('animateRock');
+    generateComputer();
+    console.log(userChoice)
+    console.log(computerChoice)
     winner();
-    setTimeout(function(){leaf.classList.toggle('unclickable')},10000);
-    setTimeout(function(){scissors.classList.toggle('unclickable')},10000);
-    setTimeout(function(){rock.classList.toggle('translateAnimationClass')},10000);
-    
-
+    setTimeout(function () {
+        leaf.classList.toggle('unclickable')
+    }, 8000);
+    setTimeout(function () {
+        scissors.classList.toggle('unclickable')
+    }, 8000);
+    setTimeout(function () {
+        rock.classList.toggle('animateRock')
+    }, 8000);
+}
+/**
+ *
+ * generate choice computer
+ * @return computerchoice
+ *
+ * */
+function generateComputer() {
+    var number = Math.floor(Math.random() * elements.length);
+    for (var i = 0; i < elements.length; i++) {
+        computerChoice = elements[number];
+    }
+    if(computerChoice === "feuille"){
+        leafComputer.classList.toggle('animateLeafComputer');
+        setTimeout(function(){leafComputer.classList.remove('animateLeafComputer');},8000)
+    }else if(computerChoice === "pierre"){
+        rockComputer.classList.toggle('animateRockComputer');
+        setTimeout(function(){rockComputer.classList.remove('animateRockComputer');},8000)
+    }else if(computerChoice === "ciseaux"){
+        scissorsComputer.classList.toggle('animateScissorsComputer');
+        setTimeout(function(){scissorsComputer.classList.remove('animateScissorsComputer');},8000)
+    }
 }
 /**
  *
@@ -186,31 +190,46 @@ rock.onclick = function () {
  *
  */
 var winner = function () {
-    if (computer === "feuille") {
-        if (userChoice === "pierre") {
-            computerWin = true;
-            print();
-        } else if (userChoice === "ciseaux") {
+    if (userChoice === computerChoice){
+        result.innerHTML = "match null";
+    }
+    if (userChoice === "feuille") {
+        if (computerChoice === "pierre") {
             userWin = true;
             print();
-        }
-    } else if (computer === "ciseaux") {
-        if (userChoice === "pierre") {
-            userWin = true;
-            print();
-        } else if (userChoice === "feuille") {
-            computerWin = true;
-            print();
-        }
-    } else if (computer === "pierre") {
-        if (userChoice === "feuille") {
-            userWin = true;
-            print();
-        } else if (userChoice === "ciseaux") {
+        }else if (computerChoice === "ciseaux") {
             computerWin = true;
             print();
         }
     }
+    if (userChoice === "ciseaux") {
+        if (computerChoice === "pierre") {
+            computerWin = true;
+            print();
+        }else if (computerChoice === "feuille") {
+            userWin = true;
+            print();
+        }
+    }
+    if (userChoice === "pierre") {
+        if (computerChoice === "feuille") {
+            computerWin = true;
+            print();
+        }else if (computerChoice === "ciseaux") {
+            userWin = true;
+            print();
+        }
+    }
+}
+/**
+ *
+ * resetting chance
+ *
+ *
+ * */
+function resetWinner() {
+    userWin = false;
+    computerWin = false;
 }
 /**
  *
@@ -220,10 +239,14 @@ var winner = function () {
  */
 var print = function () {
     if (userWin == true) {
+        resetWinner();
         userChance++;
+        result.innerHTML = "vous gagne";
         document.getElementById('user').value = userChance;
-    } else if (computerWin == true) {
+    }else if (computerWin == true) {
+        resetWinner();
         computerChance++;
+        result.innerHTML = "ordi gagne";
         document.getElementById('computer').value = computerChance;
     }
 }
