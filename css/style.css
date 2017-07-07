@@ -317,3 +317,33 @@ main form .form input {
 main .unclickable {
   pointer-events: none;
 }
+/* line 211, ../sass/style.scss */
+main .win {
+  background-image: url("../img/39260137.gif");
+  background-repeat: no-repeat;
+  background-size: 300px 200px;
+  background-attachment: fixed;
+  background-position: center;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* line 225, ../sass/style.scss */
+main .lose {
+  background-image: url("../img/rivers-or-tears.gif");
+  background-repeat: no-repeat;
+  background-size: 300px 200px;
+  background-attachment: fixed;
+  background-position: center;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}

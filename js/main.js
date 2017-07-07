@@ -16,80 +16,12 @@ var leaf = document.getElementById('leaf');
 var rock = document.getElementById('rock');
 var scissorsComputer = document.getElementById('scissorsComputer');
 var rockComputer = document.getElementById('rockComputer');
-var leafcomputer = document.getElementById('leafComputer');
+var leafComputer = document.getElementById('leafComputer');
 var result = document.getElementById('result');
 document.getElementById('user').value = 0;
 document.getElementById('computer').value = 0;
-/**
- *
- * computerChoice function
- * @return result of computer choice
- *
- * */
-/*
-var computerChoices = function (msgc, msgp, msgf) {
-    if (computer === 'ciseaux') {
-        computer = document.getElementById('scissorsC');
-        var elemC = computer;
-        var posC = 0;
-        var idC = setInterval(frameC, 9);
-        document.getElementById('result').innerHTML = msgc;
-        function frameC() {
-            if (posC == 120) {
-                elemC.classList.remove('translateAnimationClassC');
-                clearInterval(idC);
-            } else {
-                elemC.classList.add('translateAnimationClassC');
-                posC++;
-                elemC.style.top = posC + 'px';
-                elemC.style.right = posC + 'px';
-            }
-        }
-    }
-    if (computer === 'pierre') {
-        computer = document.getElementById('rockC')
-        var elemR = computer;
-        var posR = 0;
-        var idR = setInterval(frameR, 9);
-        document.getElementById('result').innerHTML = msgp;
-
-        function frameR() {
-            if (posR == 120) {
-                elemR.classList.remove('translateAnimationClassC');
-                clearInterval(idR);
-            } else {
-                elemR.classList.add('translateAnimationClassC');
-                posR++;
-                elemR.style.bottom = '-20px';
-                elemR.style.right = posR + 'px';
-            }
-        }
-    }
-    if (computer === 'feuille') {
-        computer = document.getElementById('leafC');
-        computer.classList.add('translateAnimationClassC');
-        setTimeout(function () {
-            computer.classList.toggle('translateAnimationClassC')
-        }, 10000);
-        document.getElementById('result').innerHTML = msgf;
-        /*var elemL = computer;
-         var posL = 0;
-         var idL = setInterval(frameL, 9);
-         document.getElementById('result').innerHTML = msgf;
-         function frameL() {
-         if (posL == 120) {
-         elemL.classList.remove('translateAnimationClassC');
-         clearInterval(idL);
-         } else {
-         elemL.classList.add('translateAnimationClassC');
-         posL++;
-         elemL.style.bottom = '80px';
-         elemL.style.right = posL + 'px';
-         }
-         }
-    }
-}
-*/
+var win = document.getElementById('win');
+var lose = document.getElementById('lose');
 /**
  *
  * scissor function
@@ -105,13 +37,14 @@ scissors.onclick = function () {
     winner();
     setTimeout(function () {
         leaf.classList.toggle('unclickable')
-    }, 8000);
+    }, 3000);
     setTimeout(function () {
         scissors.classList.toggle('animateScissors')
-    }, 8000);
+    }, 3000);
     setTimeout(function () {
         rock.classList.toggle('unclickable')
-    }, 8000);
+    }, 3000);
+    haveWin();
 }
 /**
  *
@@ -128,13 +61,14 @@ leaf.onclick = function () {
     winner();
     setTimeout(function () {
         leaf.classList.toggle('animateLeaf')
-    }, 8000);
+    }, 3000);
     setTimeout(function () {
         scissors.classList.toggle('unclickable')
-    }, 8000);
+    }, 3000);
     setTimeout(function () {
         rock.classList.toggle('unclickable')
-    }, 8000);
+    }, 3000);
+    haveWin();
 }
 /**
  *
@@ -153,13 +87,14 @@ rock.onclick = function () {
     winner();
     setTimeout(function () {
         leaf.classList.toggle('unclickable')
-    }, 8000);
+    }, 3000);
     setTimeout(function () {
         scissors.classList.toggle('unclickable')
-    }, 8000);
+    }, 3000);
     setTimeout(function () {
         rock.classList.toggle('animateRock')
-    }, 8000);
+    }, 3000);
+    haveWin();
 }
 /**
  *
@@ -174,13 +109,13 @@ function generateComputer() {
     }
     if(computerChoice === "feuille"){
         leafComputer.classList.toggle('animateLeafComputer');
-        setTimeout(function(){leafComputer.classList.remove('animateLeafComputer');},8000)
+        setTimeout(function(){leafComputer.classList.remove('animateLeafComputer');},3000)
     }else if(computerChoice === "pierre"){
         rockComputer.classList.toggle('animateRockComputer');
-        setTimeout(function(){rockComputer.classList.remove('animateRockComputer');},8000)
+        setTimeout(function(){rockComputer.classList.remove('animateRockComputer');},3000)
     }else if(computerChoice === "ciseaux"){
         scissorsComputer.classList.toggle('animateScissorsComputer');
-        setTimeout(function(){scissorsComputer.classList.remove('animateScissorsComputer');},8000)
+        setTimeout(function(){scissorsComputer.classList.remove('animateScissorsComputer');},3000)
     }
 }
 /**
@@ -250,7 +185,23 @@ var print = function () {
         document.getElementById('computer').value = computerChance;
     }
 }
-
+/**
+ *
+ * win function
+ * @return deload window
+ *
+ *
+ * */
+var haveWin = function(){
+    if(userChance === 3){
+        setTimeout(function(){win.classList.add('win')},3000)
+        setTimeout(function(){win.insertAdjacentHTML('afterend', '<div id="rejouer" style="position:absolute;left:50%;width:100px;margin-left:-50px;text-align:center;margin-top:200px;color:#944949;cursor:crosshair;" onClick="window.location.reload()" class="animated tada">Rejouer ?</div>')},3000)
+    }
+    if(computerChance === 3){
+        setTimeout(function(){lose.classList.add('lose')},3000)
+        setTimeout(function(){lose.insertAdjacentHTML('afterend', '<div id="rejouer" style="position:absolute;left:50%;width:100px;margin-left:-50px;text-align:center;margin-top:200px;color:#944949;cursor:crosshair;" onClick="window.location.reload()" class="animated tada">Rejouer ?</div>')},3000)
+    }
+}
 
 
 
