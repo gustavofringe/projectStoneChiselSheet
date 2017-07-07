@@ -62,8 +62,11 @@ var computerChoice = function (msgc, msgp, msgf) {
         }
     }
     if (computer === 'feuille') {
-        computer = document.getElementById('leafC')
-        var elemL = computer;
+        computer = document.getElementById('leafC');
+        computer.classList.add('translateAnimationClassC');
+        setTimeout(function(){computer.classList.toggle('translateAnimationClassC')},10000);
+        document.getElementById('result').innerHTML = msgf;
+        /*var elemL = computer;
         var posL = 0;
         var idL = setInterval(frameL, 9);
         document.getElementById('result').innerHTML = msgf;
@@ -77,7 +80,7 @@ var computerChoice = function (msgc, msgp, msgf) {
                 elemL.style.bottom = '80px';
                 elemL.style.right = posL + 'px';
             }
-        }
+        }*/
     }
 }
 /**
@@ -150,7 +153,7 @@ rock.onclick = function () {
     userChoice = this.alt;
     rock.classList.add('translateAnimationClass');
 
-    rock.classList.add('move');
+     /*rock.classList.add('move');/*
     /*var elem = rock;
     var pos = 0;
     var id = setInterval(frame, 9);
@@ -170,10 +173,10 @@ rock.onclick = function () {
         computerChoice('vous gagne', 'match null', 'ordi gagne');
     }, 1500)
     winner();
-    setTimeout(function(){rock.classList.remove('move')},7000);
-    setTimeout(function(){leaf.classList.remove('unclickable')},7000);
-    setTimeout(function(){scissors.classList.remove('unclickable')},7000);
-    setTimeout(function(){rock.classList.remove('translateAnimationClass')},2000);
+    setTimeout(function(){leaf.classList.toggle('unclickable')},10000);
+    setTimeout(function(){scissors.classList.toggle('unclickable')},10000);
+    setTimeout(function(){rock.classList.toggle('translateAnimationClass')},10000);
+    
 
 }
 /**
@@ -223,10 +226,6 @@ var print = function () {
         computerChance++;
         document.getElementById('computer').value = computerChance;
     }
-}
-var reset = function(){
-    this.id = id;
-    id.removeAttribute('style');
 }
 
 

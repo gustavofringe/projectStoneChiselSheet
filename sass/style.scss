@@ -43,7 +43,12 @@ main{
       font-size: 10px;
     }
   .translateAnimationClass {
-    -webkit-animation: rotation 2s infinite linear;
+    animation-name: rotation, mymove;
+    animation-duration: 2s, 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-play-state: unset;
+    animation-fill-mode: forwards;
   }
   .translateAnimationClassC {
     -webkit-animation: rotation 2s infinite;
@@ -56,6 +61,13 @@ main{
     to {
       -webkit-transform: rotate(700deg);
     }
+  }
+  @keyframes mymove {
+    0%{left:0;top:0}
+    25%{left:25px;top:0}
+    50%{left:50px;top:0}
+    75%{left:75;top:0}
+    100%{left:120px;top:20px}
   }
   .elements-user{
     img{
@@ -89,12 +101,5 @@ main{
   .unclickable {
     pointer-events: none;
   }
-  .move{
-    position: relative;
-    animation: mymove 4s linear 0s ;
-  }
-  @-webkit-keyframes mymove {
-    from {left: 100px;}
-    to {top: 0px;}
-  }
+  
 }

@@ -52,9 +52,14 @@ main h2 {
 }
 /* line 45, ../sass/style.scss */
 main .translateAnimationClass {
-  -webkit-animation: rotation 2s infinite linear;
+  animation-name: rotation, mymove;
+  animation-duration: 2s, 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-play-state: unset;
+  animation-fill-mode: forwards;
 }
-/* line 48, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 main .translateAnimationClassC {
   -webkit-animation: rotation 2s infinite;
 }
@@ -66,12 +71,34 @@ main .translateAnimationClassC {
     -webkit-transform: rotate(700deg);
   }
 }
-/* line 61, ../sass/style.scss */
+@keyframes mymove {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  25% {
+    left: 25px;
+    top: 0;
+  }
+  50% {
+    left: 50px;
+    top: 0;
+  }
+  75% {
+    left: 75;
+    top: 0;
+  }
+  100% {
+    left: 120px;
+    top: 20px;
+  }
+}
+/* line 73, ../sass/style.scss */
 main .elements-user img {
   position: relative;
   display: block;
 }
-/* line 67, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 main .elements-computer img {
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -80,38 +107,25 @@ main .elements-computer img {
   position: relative;
   display: block;
 }
-/* line 73, ../sass/style.scss */
+/* line 85, ../sass/style.scss */
 main form {
   display: flex;
   margin-top: 25px;
 }
-/* line 77, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 main form .form label {
   font-size: 10px;
 }
-/* line 80, ../sass/style.scss */
+/* line 92, ../sass/style.scss */
 main form .form label, main form .form input {
   display: block;
 }
-/* line 83, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
 main form .form input {
   width: 15px;
   margin: 0 auto;
 }
-/* line 89, ../sass/style.scss */
+/* line 101, ../sass/style.scss */
 main .unclickable {
   pointer-events: none;
-}
-/* line 92, ../sass/style.scss */
-main .move {
-  position: relative;
-  animation: mymove 4s linear 0s;
-}
-@-webkit-keyframes mymove {
-  from {
-    left: 100px;
-  }
-  to {
-    top: 0px;
-  }
 }
