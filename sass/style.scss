@@ -3,7 +3,7 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import "compass/css3/transform";
-
+$bc:#4B697F;
 @font-face {
   font-family: "personal";
   src: url('../fonts/PersonalServices.ttf');
@@ -31,7 +31,7 @@ html, body {
 */
 header {
   overflow: hidden;
-  background-color: #E82C0C;
+  background-color: $bc;
   h1 {
     text-align: center;
   }
@@ -335,7 +335,7 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #E82C0C;
+  background-color: $bc;
   height: 110px;
   .container {
     p {
@@ -344,3 +344,4 @@ footer {
     }
   }
 }
+@import "tablet";

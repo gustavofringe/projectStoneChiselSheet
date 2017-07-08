@@ -30,7 +30,7 @@ html, body {
 /* line 32, ../sass/style.scss */
 header {
   overflow: hidden;
-  background-color: #E82C0C;
+  background-color: #4B697F;
 }
 /* line 35, ../sass/style.scss */
 header h1 {
@@ -353,11 +353,213 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #E82C0C;
+  background-color: #4B697F;
   height: 110px;
 }
 /* line 341, ../sass/style.scss */
 footer .container p {
   line-height: 110px;
   text-align: center;
+}
+
+/*===============================================
+tablet format
+==================================================*/
+@media screen and (min-width: 768px) {
+  /* line 5, ../sass/_tablet.scss */
+  main {
+    width: 700px;
+    margin: auto auto;
+  }
+  /* line 8, ../sass/_tablet.scss */
+  main h2 {
+    font-size: 20px;
+  }
+  /* line 11, ../sass/_tablet.scss */
+  main .elements-user {
+    width: 300px;
+  }
+  /* line 13, ../sass/_tablet.scss */
+  main .elements-user .animate {
+    padding-top: 20px;
+  }
+  /* line 17, ../sass/_tablet.scss */
+  main .elements-user #scissors {
+    content: url("../img/ciseaux_m.png");
+  }
+  /* line 20, ../sass/_tablet.scss */
+  main .elements-user #rock {
+    content: url("../img/pierre_m.png");
+  }
+  /* line 23, ../sass/_tablet.scss */
+  main .elements-user #leaf {
+    content: url("../img/feuille_m.png");
+  }
+  /* line 27, ../sass/_tablet.scss */
+  main .elements-computer {
+    width: 300px;
+  }
+  /* line 29, ../sass/_tablet.scss */
+  main .elements-computer .animate {
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    position: relative;
+    display: block;
+    padding-top: 30px;
+  }
+  /* line 35, ../sass/_tablet.scss */
+  main .elements-computer #scissorsComputer {
+    content: url("../img/ciseaux_m.png");
+  }
+  /* line 38, ../sass/_tablet.scss */
+  main .elements-computer #rockComputer {
+    content: url("../img/pierre_m.png");
+  }
+  /* line 41, ../sass/_tablet.scss */
+  main .elements-computer #leafComputer {
+    content: url("../img/feuille_m.png");
+  }
+  @keyframes scissors {
+    0% {
+      left: 0;
+      top: 0;
+    }
+    25% {
+      left: 100px;
+      top: 30px;
+    }
+    50% {
+      left: 150px;
+      top: 60px;
+    }
+    75% {
+      left: 200px;
+      top: 100px;
+    }
+    100% {
+      left: 250px;
+      top: 150px;
+    }
+  }
+  @keyframes scissorsComputer {
+    0% {
+      right: 0;
+      top: 0;
+    }
+    25% {
+      right: 100px;
+      top: 30px;
+    }
+    50% {
+      right: 150px;
+      top: 60px;
+    }
+    75% {
+      right: 200px;
+      top: 100px;
+    }
+    100% {
+      right: 250px;
+      top: 150px;
+    }
+  }
+  @keyframes rock {
+    0% {
+      left: 0;
+      top: 0;
+    }
+    25% {
+      left: 100px;
+      top: 0;
+    }
+    50% {
+      left: 150px;
+      top: 0;
+    }
+    75% {
+      left: 200px;
+      top: 0;
+    }
+    100% {
+      left: 250px;
+      top: -50px;
+    }
+  }
+  @keyframes rockComputer {
+    0% {
+      right: 0;
+      top: 0;
+    }
+    25% {
+      right: 100px;
+      top: 0;
+    }
+    50% {
+      right: 150px;
+      top: 0;
+    }
+    75% {
+      right: 200px;
+      top: 0;
+    }
+    100% {
+      right: 250px;
+      top: -50px;
+    }
+  }
+  @keyframes leaf {
+    0% {
+      left: 0;
+      bottom: 0;
+    }
+    25% {
+      left: 100px;
+      bottom: 30px;
+    }
+    50% {
+      left: 150px;
+      bottom: 60px;
+    }
+    75% {
+      left: 200px;
+      bottom: 90px;
+    }
+    100% {
+      left: 250px;
+      bottom: 200px;
+    }
+  }
+  @keyframes leafComputer {
+    0% {
+      right: 0;
+      bottom: 0;
+    }
+    25% {
+      right: 100px;
+      bottom: 30px;
+    }
+    50% {
+      right: 150px;
+      bottom: 60px;
+    }
+    75% {
+      right: 200px;
+      bottom: 90px;
+    }
+    100% {
+      right: 250px;
+      bottom: 200px;
+    }
+  }
+  /* line 177, ../sass/_tablet.scss */
+  main .form {
+    width: 120px;
+  }
+  /* line 179, ../sass/_tablet.scss */
+  main .form label {
+    text-align: center;
+    font-size: 15px !important;
+  }
 }
