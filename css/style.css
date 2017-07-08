@@ -6,13 +6,13 @@
   font-family: "personal";
   src: url("../fonts/PersonalServices.ttf");
 }
- /*
+/*
 *
 *html,body
 *
 *
 */
-/* line 15, ../sass/style.scss */
+/* line 18, ../sass/style.scss */
 html, body {
   font-family: "personal";
   margin: 0;
@@ -27,16 +27,16 @@ html, body {
 *
 *
 */
-/* line 28, ../sass/style.scss */
+/* line 32, ../sass/style.scss */
 header {
   overflow: hidden;
   background-color: #E82C0C;
 }
-/* line 31, ../sass/style.scss */
+/* line 35, ../sass/style.scss */
 header h1 {
   text-align: center;
 }
-/* line 34, ../sass/style.scss */
+/* line 38, ../sass/style.scss */
 header #player {
   /**
   *
@@ -44,15 +44,9 @@ header #player {
   *player name
   *
   **/
-  width: 300px;
-  height: 100px;
-  line-height: 40px;
-  margin: 0 auto;
-  color: #0D6BFF;
   text-align: center;
-  font-size: 20px;
 }
-/* line 49, ../sass/style.scss */
+/* line 47, ../sass/style.scss */
 header #result {
   /*
   *
@@ -70,16 +64,18 @@ header #result {
 *main
 *
 */
-/* line 66, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 main {
+  margin-top: 25px;
   display: flex;
   justify-content: space-around;
 }
 /* line 69, ../sass/style.scss */
 main h2 {
+  padding-bottom: 25px;
   font-size: 10px;
 }
-/* line 72, ../sass/style.scss */
+/* line 73, ../sass/style.scss */
 main .animateRock {
   animation-name: rotation, rock;
   animation-duration: 2s, 2s;
@@ -88,7 +84,7 @@ main .animateRock {
   animation-play-state: unset;
   animation-fill-mode: forwards;
 }
-/* line 80, ../sass/style.scss */
+/* line 81, ../sass/style.scss */
 main .animateLeaf {
   animation-name: rotation, leaf;
   animation-duration: 2s, 2s;
@@ -97,7 +93,7 @@ main .animateLeaf {
   animation-play-state: unset;
   animation-fill-mode: forwards;
 }
-/* line 88, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 main .animateScissors {
   animation-name: rotation, scissors;
   animation-duration: 2s, 2s;
@@ -106,7 +102,7 @@ main .animateScissors {
   animation-play-state: unset;
   animation-fill-mode: forwards;
 }
-/* line 96, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
 main .animateLeafComputer {
   animation-name: rotationComputer, leafComputer;
   animation-duration: 2s, 2s;
@@ -115,7 +111,7 @@ main .animateLeafComputer {
   animation-play-state: unset;
   animation-fill-mode: forwards;
 }
-/* line 104, ../sass/style.scss */
+/* line 105, ../sass/style.scss */
 main .animateRockComputer {
   animation-name: rotationComputer, rockComputer;
   animation-duration: 2s, 2s;
@@ -124,7 +120,7 @@ main .animateRockComputer {
   animation-play-state: unset;
   animation-fill-mode: forwards;
 }
-/* line 112, ../sass/style.scss */
+/* line 113, ../sass/style.scss */
 main .animateScissorsComputer {
   animation-name: rotationComputer, scissorsComputer;
   animation-duration: 2s, 2s;
@@ -212,7 +208,7 @@ main .animateScissorsComputer {
   }
   100% {
     left: 120px;
-    top: 120px;
+    top: 140px;
   }
 }
 @keyframes rockComputer {
@@ -248,15 +244,15 @@ main .animateScissorsComputer {
   }
   50% {
     right: 50px;
-    bottom: 50px;
+    bottom: 40px;
   }
   75% {
     right: 75px;
-    bottom: 60px;
+    bottom: 50px;
   }
   100% {
     right: 120px;
-    bottom: 70px;
+    bottom: 60px;
   }
 }
 @keyframes scissorsComputer {
@@ -278,15 +274,15 @@ main .animateScissorsComputer {
   }
   100% {
     right: 120px;
-    top: 120px;
+    top: 140px;
   }
 }
-/* line 180, ../sass/style.scss */
+/* line 271, ../sass/style.scss */
 main .elements-user .animate {
   position: relative;
   display: block;
 }
-/* line 186, ../sass/style.scss */
+/* line 277, ../sass/style.scss */
 main .elements-computer .animate {
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -295,29 +291,29 @@ main .elements-computer .animate {
   position: relative;
   display: block;
 }
-/* line 192, ../sass/style.scss */
+/* line 283, ../sass/style.scss */
 main form {
   display: flex;
-  margin-top: 25px;
+  padding-top: 50px;
 }
-/* line 196, ../sass/style.scss */
+/* line 287, ../sass/style.scss */
 main form .form label {
   font-size: 10px;
 }
-/* line 199, ../sass/style.scss */
+/* line 290, ../sass/style.scss */
 main form .form label, main form .form input {
   display: block;
 }
-/* line 202, ../sass/style.scss */
+/* line 293, ../sass/style.scss */
 main form .form input {
   width: 15px;
   margin: 0 auto;
 }
-/* line 208, ../sass/style.scss */
+/* line 299, ../sass/style.scss */
 main .unclickable {
   pointer-events: none;
 }
-/* line 211, ../sass/style.scss */
+/* line 302, ../sass/style.scss */
 main .win, main .lose {
   background-repeat: no-repeat;
   background-size: 300px 200px;
@@ -331,15 +327,15 @@ main .win, main .lose {
   top: 0;
   background-color: rgba(0, 0, 0, 0.8);
 }
-/* line 224, ../sass/style.scss */
+/* line 315, ../sass/style.scss */
 main .win {
   background-image: url("../img/39260137.gif");
 }
-/* line 227, ../sass/style.scss */
+/* line 318, ../sass/style.scss */
 main .lose {
   background-image: url("../img/rivers-or-tears.gif");
 }
-/* line 230, ../sass/style.scss */
+/* line 321, ../sass/style.scss */
 main #replay {
   position: absolute;
   left: 50%;
@@ -351,13 +347,17 @@ main #replay {
   cursor: crosshair;
 }
 
-/* line 241, ../sass/style.scss */
+/* line 333, ../sass/style.scss */
 footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: #E82C0C;
   height: 110px;
 }
-/* line 245, ../sass/style.scss */
+/* line 341, ../sass/style.scss */
 footer .container p {
-  padding-top: 50px;
+  line-height: 110px;
   text-align: center;
 }

@@ -2,23 +2,27 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
- @import "compass/css3/transform";
+@import "compass/css3/transform";
+
 @font-face {
-    font-family: "personal";
-    src: url('../fonts/PersonalServices.ttf');
-}/*
+  font-family: "personal";
+  src: url('../fonts/PersonalServices.ttf');
+}
+
+/*
 *
 *html,body
 *
 *
 */
-html,body{
+html, body {
   font-family: "personal";
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
 }
+
 /*
 *
 *header
@@ -28,7 +32,7 @@ html,body{
 header {
   overflow: hidden;
   background-color: #E82C0C;
-  h1{
+  h1 {
     text-align: center;
   }
   #player {
@@ -38,15 +42,9 @@ header {
     *player name
     *
     **/
-    width: 300px;
-    height: 100px;
-    line-height: 40px;
-    margin: 0 auto;
-    color: #0D6BFF;
     text-align: center;
-    font-size:20px;
   }
-  #result{
+  #result {
     /*
     *
     *result
@@ -57,18 +55,21 @@ header {
     margin: 0 auto;
   }
 }
+
 /*
 *
 *
 *main
 *
 */
-main{
+main {
+  margin-top: 25px;
   display: flex;
   justify-content: space-around;
-  h2{
-      font-size: 10px;
-    }
+  h2 {
+    padding-bottom: 25px;
+    font-size: 10px;
+  }
   .animateRock {
     animation-name: rotation, rock;
     animation-duration: 2s, 2s;
@@ -135,71 +136,161 @@ main{
     }
   }
   @keyframes rock {
-    0%{left:0;top:0}
-    25%{left:25px;top:0}
-    50%{left:50px;top:0}
-    75%{left:75px;top:0}
-    100%{left:120px;top:20px}
+    0% {
+      left: 0;
+      top: 0
+    }
+    25% {
+      left: 25px;
+      top: 0
+    }
+    50% {
+      left: 50px;
+      top: 0
+    }
+    75% {
+      left: 75px;
+      top: 0
+    }
+    100% {
+      left: 120px;
+      top: 20px
+    }
   }
   @keyframes leaf {
-    0%{left:0;bottom:0}
-    25%{left:25px;bottom:25px}
-    50%{left:50px;bottom:30px}
-    75%{left:75px;bottom:35px}
-    100%{left:120px;bottom:60px}
+    0% {
+      left: 0;
+      bottom: 0
+    }
+    25% {
+      left: 25px;
+      bottom: 25px
+    }
+    50% {
+      left: 50px;
+      bottom: 30px
+    }
+    75% {
+      left: 75px;
+      bottom: 35px
+    }
+    100% {
+      left: 120px;
+      bottom: 60px
+    }
   }
   @keyframes scissors {
-    0%{left:0;top:0}
-    25%{left:25px;top:25px}
-    50%{left:50px;top:50px}
-    75%{left:75px;top:80px}
-    100%{left:120px;top:120px}
+    0% {
+      left: 0;
+      top: 0
+    }
+    25% {
+      left: 25px;
+      top: 25px
+    }
+    50% {
+      left: 50px;
+      top: 50px
+    }
+    75% {
+      left: 75px;
+      top: 80px
+    }
+    100% {
+      left: 120px;
+      top: 140px
+    }
   }
   @keyframes rockComputer {
-    0%{right:0;top:0}
-    25%{right:25px;top:0}
-    50%{right:50px;top:0}
-    75%{right:75px;top:0}
-    100%{right:120px;top:20px}
+    0% {
+      right: 0;
+      top: 0
+    }
+    25% {
+      right: 25px;
+      top: 0
+    }
+    50% {
+      right: 50px;
+      top: 0
+    }
+    75% {
+      right: 75px;
+      top: 0
+    }
+    100% {
+      right: 120px;
+      top: 20px
+    }
   }
   @keyframes leafComputer {
-    0%{right:0;bottom:0}
-    25%{right:25px;bottom:25px}
-    50%{right:50px;bottom:50px}
-    75%{right:75px;bottom:60px}
-    100%{right:120px;bottom:70px}
+    0% {
+      right: 0;
+      bottom: 0
+    }
+    25% {
+      right: 25px;
+      bottom: 25px
+    }
+    50% {
+      right: 50px;
+      bottom: 40px
+    }
+    75% {
+      right: 75px;
+      bottom: 50px
+    }
+    100% {
+      right: 120px;
+      bottom: 60px
+    }
   }
   @keyframes scissorsComputer {
-    0%{right:0;top:0}
-    25%{right:25px;top:25px}
-    50%{right:50px;top:50px}
-    75%{right:75px;top:80px}
-    100%{right:120px;top:120px}
+    0% {
+      right: 0;
+      top: 0
+    }
+    25% {
+      right: 25px;
+      top: 25px
+    }
+    50% {
+      right: 50px;
+      top: 50px
+    }
+    75% {
+      right: 75px;
+      top: 80px
+    }
+    100% {
+      right: 120px;
+      top: 140px
+    }
   }
-  .elements-user{
-    .animate{
+  .elements-user {
+    .animate {
       position: relative;
       display: block
     }
   }
-  .elements-computer{
-    .animate{
+  .elements-computer {
+    .animate {
       @include transform (rotate(-90deg));
       position: relative;
       display: block
     }
   }
-  form{
+  form {
     display: flex;
-    margin-top: 25px;
-    .form{
-      label{
+    padding-top: 50px;
+    .form {
+      label {
         font-size: 10px;
       }
-      label,input{
+      label, input {
         display: block;
       }
-      input{
+      input {
         width: 15px;
         margin: 0 auto;
       }
@@ -208,7 +299,7 @@ main{
   .unclickable {
     pointer-events: none;
   }
-  .win, .lose{
+  .win, .lose {
     background-repeat: no-repeat;
     background-size: 300px 200px;
     background-attachment: fixed;
@@ -219,31 +310,36 @@ main{
     bottom: 0;
     right: 0;
     top: 0;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
   }
-  .win{
+  .win {
     background-image: url('../img/39260137.gif');
   }
-  .lose{
+  .lose {
     background-image: url('../img/rivers-or-tears.gif');
   }
-  #replay{
-    position:absolute;
-    left:50%;
-    width:100px;
-    margin-left:-50px;
-    text-align:center;
-    margin-top:200px;
-    color:#944949;
-    cursor:crosshair;
+  #replay {
+    position: absolute;
+    left: 50%;
+    width: 100px;
+    margin-left: -50px;
+    text-align: center;
+    margin-top: 200px;
+    color: #944949;
+    cursor: crosshair;
   }
 }
-footer{
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: #E82C0C;
   height: 110px;
-  .container{
-    p{
-      padding-top: 50px;
+  .container {
+    p {
+      line-height: 110px;
       text-align: center;
     }
   }

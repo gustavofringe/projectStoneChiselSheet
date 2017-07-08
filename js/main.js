@@ -1,9 +1,45 @@
-/*(function () {
+/**
+ *
+ * document title
+ *
+ * */
+document.title = "Pierre|Feuille|Ciseaux";
+/**
+ *
+ * change url
+ *
+ * */
+function url() {
+    history.pushState({
+        path: this.path
+    }, '', 'pierre-feuille-ciseaux');
+}
+url();
+/**
+ *
+ *
+ * load player name
+ *
+ * */
+/*
+(function () {
  var user = prompt('Quel est ton prénom ?').toLowerCase();
- document.getElementById("player").innerHTML = "Bienvenue "+user+" pret pour jouer au pendu?"
- })();
+ document.getElementById("player").innerHTML = "Bienvenue "+user+" pret pour jouer au pierre, feuille, ciseaux?"
+ })();*/
+/**
+ *
+ * charge play song
+ *
+ *
+ * */
+/*
  var audio = new Audio('../song/Rocky.mp3');
  audio.play();*/
+ /**
+  *
+  *
+  *
+  * */
 var computerChance = 0;
 var userChance = 0;
 var userChoice;
@@ -82,8 +118,6 @@ rock.onclick = function () {
     userChoice = this.alt;
     rock.classList.add('animateRock');
     generateComputer();
-    console.log(userChoice)
-    console.log(computerChoice)
     winner();
     setTimeout(function () {
         leaf.classList.toggle('unclickable')
@@ -201,7 +235,10 @@ var print = function () {
 var haveWin = function () {
     if (userChance === 3) {
         setTimeout(function () {
-            win.classList.add('win')
+            audio.pause();
+        }, 3000)
+        setTimeout(function () {
+            win.classList.add('win');
         }, 3000)
         setTimeout(function () {
             win.insertAdjacentHTML('afterbegin', '<div id="replay" onClick="window.location.reload()">Rejouer</div>')
@@ -209,7 +246,10 @@ var haveWin = function () {
     }
     if (computerChance === 3) {
         setTimeout(function () {
-            lose.classList.add('lose')
+            audio.pause();
+        }, 3000)
+        setTimeout(function () {
+            lose.classList.add('lose');
         }, 3000)
         setTimeout(function () {
             lose.insertAdjacentHTML('afterbegin', '<div id="replay" onClick="window.location.reload()">Rejouer</div>')
