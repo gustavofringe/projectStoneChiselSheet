@@ -22,43 +22,46 @@
     <div id="result"></div>
 </header>
 <main>
-    <div class="container mt-2">
-        <div class="row">
-            <div class="elements-user col-sm-4 col-4">
-                <h2>Choisissez votre element</h2>
-                <img id="scissors" class="animate" srcset="img/ciseaux_m.png 768w" src="img/ciseaux_s.png"
-                     alt="ciseaux">
-                <img id="rock" class="animate" srcset="img/pierre_m.png 768w" src="img/pierre_s.png" alt="pierre">
-                <img id="leaf" class="animate" srcset="img/feuille_m.png 768w" src="img/feuille_s.png" alt="feuille">
-            </div>
-            <form class="col-sm-4 col-4 form-group">
-                <div class="form mx-auto">
-                    <label for="user">Vous</label>
-                    <input class="form-control" type="text" id="user" name="user">
+    <div id="end">
+        <div class="container mt-2">
+            <div class="row">
+                <div class="elements-user col-sm-4 col-4">
+                    <h2>Choisissez votre element</h2>
+                    <img id="scissors" class="animate" srcset="img/ciseaux_m.png 768w" src="img/ciseaux_s.png"
+                         alt="ciseaux">
+                    <img id="rock" class="animate" srcset="img/pierre_m.png 768w" src="img/pierre_s.png" alt="pierre">
+                    <img id="leaf" class="animate" srcset="img/feuille_m.png 768w" src="img/feuille_s.png"
+                         alt="feuille">
                 </div>
-                <div class="form mx-auto">
-                    <label for="computer">/Ordinateur</label>
-                    <input class="form-control" type="text" id="computer" name="computer">
+                <form class="col-sm-4 col-4 form-group">
+                    <div class="form mx-auto">
+                        <label for="user">Vous</label>
+                        <input class="form-control" type="text" id="user" name="user">
+                    </div>
+                    <div class="form mx-auto">
+                        <label for="computer">/Ordinateur</label>
+                        <input class="form-control" type="text" id="computer" name="computer">
+                    </div>
+                </form>
+                <div class="elements-computer col-sm-4 col-4">
+                    <h2>Choix Ordinateur</h2>
+                    <img id="scissorsComputer" class="animate" srcset="img/ciseaux_m.png 768w" src="img/ciseaux_s.png"
+                         alt="ciseaux">
+                    <img id="rockComputer" class="animate" srcset="img/pierre_m.png 768w" src="img/pierre_s.png"
+                         alt="pierre">
+                    <img id="leafComputer" class="animate" srcset="img/feuille_m.png 768w" src="img/feuille_s.png"
+                         alt="feuille">
                 </div>
-            </form>
-            <div class="elements-computer col-sm-4 col-4">
-                <h2>Choix Ordinateur</h2>
-                <img id="scissorsComputer" class="animate" srcset="img/ciseaux_m.png 768w" src="img/ciseaux_s.png"
-                     alt="ciseaux">
-                <img id="rockComputer" class="animate" srcset="img/pierre_m.png 768w" src="img/pierre_s.png"
-                     alt="pierre">
-                <img id="leafComputer" class="animate" srcset="img/feuille_m.png 768w" src="img/feuille_s.png"
-                     alt="feuille">
             </div>
-            </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container -->
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
         <div id="lose">
         </div>
 
         <div id="win">
         </div>
+    </div>
     <!-- /.end -->
 
 </main>
