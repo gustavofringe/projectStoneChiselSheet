@@ -77,6 +77,12 @@ main h2 {
 }
 /* line 73, ../sass/style.scss */
 main .animateRock {
+  /**
+  *
+  *animation rock user
+  *
+  *
+  **/
   animation-name: rotation, rock;
   animation-duration: 2s, 2s;
   animation-timing-function: linear;
@@ -84,8 +90,14 @@ main .animateRock {
   animation-play-state: unset;
   animation-fill-mode: forwards;
 }
-/* line 81, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 main .animateLeaf {
+  /*
+  *
+  *
+  *animation leaf user
+  *
+  **/
   animation-name: rotation, leaf;
   animation-duration: 2s, 2s;
   animation-timing-function: linear;
@@ -93,8 +105,15 @@ main .animateLeaf {
   animation-play-state: unset;
   animation-fill-mode: forwards;
 }
-/* line 89, ../sass/style.scss */
+/* line 101, ../sass/style.scss */
 main .animateScissors {
+  /*
+  **
+  *
+  *animation scissors user
+  *
+  *
+  */
   animation-name: rotation, scissors;
   animation-duration: 2s, 2s;
   animation-timing-function: linear;
@@ -102,8 +121,14 @@ main .animateScissors {
   animation-play-state: unset;
   animation-fill-mode: forwards;
 }
-/* line 97, ../sass/style.scss */
+/* line 116, ../sass/style.scss */
 main .animateLeafComputer {
+  /*
+  *
+  *animation leaf computer
+  *
+  *
+  **/
   animation-name: rotationComputer, leafComputer;
   animation-duration: 2s, 2s;
   animation-timing-function: linear;
@@ -111,8 +136,14 @@ main .animateLeafComputer {
   animation-play-state: unset;
   animation-fill-mode: forwards;
 }
-/* line 105, ../sass/style.scss */
+/* line 130, ../sass/style.scss */
 main .animateRockComputer {
+  /*
+  *
+  *animation rock computer
+  *
+  *
+  **/
   animation-name: rotationComputer, rockComputer;
   animation-duration: 2s, 2s;
   animation-timing-function: linear;
@@ -120,8 +151,13 @@ main .animateRockComputer {
   animation-play-state: unset;
   animation-fill-mode: forwards;
 }
-/* line 113, ../sass/style.scss */
+/* line 144, ../sass/style.scss */
 main .animateScissorsComputer {
+  /*
+  *
+  *animation scissors computer
+  *
+  **/
   animation-name: rotationComputer, scissorsComputer;
   animation-duration: 2s, 2s;
   animation-timing-function: linear;
@@ -277,12 +313,12 @@ main .animateScissorsComputer {
     top: 140px;
   }
 }
-/* line 271, ../sass/style.scss */
+/* line 307, ../sass/style.scss */
 main .elements-user .animate {
   position: relative;
   display: block;
 }
-/* line 277, ../sass/style.scss */
+/* line 313, ../sass/style.scss */
 main .elements-computer .animate {
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -291,35 +327,34 @@ main .elements-computer .animate {
   position: relative;
   display: block;
 }
-/* line 283, ../sass/style.scss */
+/* line 319, ../sass/style.scss */
 main form {
   display: flex;
   padding-top: 50px;
 }
-/* line 287, ../sass/style.scss */
+/* line 323, ../sass/style.scss */
 main form .form label {
   font-size: 10px;
 }
-/* line 290, ../sass/style.scss */
+/* line 326, ../sass/style.scss */
 main form .form label, main form .form input {
   display: block;
 }
-/* line 293, ../sass/style.scss */
+/* line 329, ../sass/style.scss */
 main form .form input {
   width: 15px;
   margin: 0 auto;
 }
-/* line 299, ../sass/style.scss */
+/* line 335, ../sass/style.scss */
 main .unclickable {
   pointer-events: none;
 }
-/* line 302, ../sass/style.scss */
+/* line 338, ../sass/style.scss */
 main .win, main .lose {
   background-repeat: no-repeat;
   background-size: 300px 200px;
   background-attachment: fixed;
   background-position: center;
-  width: 100%;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -327,15 +362,15 @@ main .win, main .lose {
   top: 0;
   background-color: rgba(0, 0, 0, 0.8);
 }
-/* line 315, ../sass/style.scss */
+/* line 350, ../sass/style.scss */
 main .win {
   background-image: url("../img/39260137.gif");
 }
-/* line 318, ../sass/style.scss */
+/* line 353, ../sass/style.scss */
 main .lose {
   background-image: url("../img/rivers-or-tears.gif");
 }
-/* line 321, ../sass/style.scss */
+/* line 356, ../sass/style.scss */
 main #replay {
   position: absolute;
   left: 50%;
@@ -347,16 +382,16 @@ main #replay {
   cursor: crosshair;
 }
 
-/* line 333, ../sass/style.scss */
+/*================================================================
+footer
+==================================================================*/
+/* line 370, ../sass/style.scss */
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  overflow: hidden;
   background-color: #4B697F;
   height: 110px;
 }
-/* line 341, ../sass/style.scss */
+/* line 375, ../sass/style.scss */
 footer .container p {
   line-height: 110px;
   text-align: center;
@@ -383,23 +418,11 @@ tablet format
   main .elements-user .animate {
     padding-top: 20px;
   }
-  /* line 17, ../sass/_tablet.scss */
-  main .elements-user #scissors {
-    content: url("../img/ciseaux_m.png");
-  }
-  /* line 20, ../sass/_tablet.scss */
-  main .elements-user #rock {
-    content: url("../img/pierre_m.png");
-  }
-  /* line 23, ../sass/_tablet.scss */
-  main .elements-user #leaf {
-    content: url("../img/feuille_m.png");
-  }
-  /* line 27, ../sass/_tablet.scss */
+  /* line 19, ../sass/_tablet.scss */
   main .elements-computer {
     width: 300px;
   }
-  /* line 29, ../sass/_tablet.scss */
+  /* line 21, ../sass/_tablet.scss */
   main .elements-computer .animate {
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
@@ -408,18 +431,6 @@ tablet format
     position: relative;
     display: block;
     padding-top: 30px;
-  }
-  /* line 35, ../sass/_tablet.scss */
-  main .elements-computer #scissorsComputer {
-    content: url("../img/ciseaux_m.png");
-  }
-  /* line 38, ../sass/_tablet.scss */
-  main .elements-computer #rockComputer {
-    content: url("../img/pierre_m.png");
-  }
-  /* line 41, ../sass/_tablet.scss */
-  main .elements-computer #leafComputer {
-    content: url("../img/feuille_m.png");
   }
   @keyframes scissors {
     0% {
@@ -506,7 +517,7 @@ tablet format
     }
     100% {
       right: 250px;
-      top: -50px;
+      top: -30px;
     }
   }
   @keyframes leaf {
@@ -550,16 +561,295 @@ tablet format
     }
     100% {
       right: 250px;
-      bottom: 200px;
+      bottom: 250px;
     }
   }
-  /* line 177, ../sass/_tablet.scss */
+  /* line 161, ../sass/_tablet.scss */
   main .form {
     width: 120px;
   }
-  /* line 179, ../sass/_tablet.scss */
+  /* line 163, ../sass/_tablet.scss */
   main .form label {
     text-align: center;
     font-size: 15px !important;
+  }
+}
+/*===============================================================
+landscape tablet format
+==================================================================*/
+@media screen and (min-width: 1024px) {
+  @keyframes scissors {
+    0% {
+      left: 0;
+      top: 0;
+    }
+    25% {
+      left: 100px;
+      top: 30px;
+    }
+    50% {
+      left: 150px;
+      top: 60px;
+    }
+    75% {
+      left: 200px;
+      top: 100px;
+    }
+    100% {
+      left: 250px;
+      top: 220px;
+    }
+  }
+  @keyframes scissorsComputer {
+    0% {
+      right: 0;
+      top: 0;
+    }
+    25% {
+      right: 100px;
+      top: 30px;
+    }
+    50% {
+      right: 150px;
+      top: 60px;
+    }
+    75% {
+      right: 200px;
+      top: 100px;
+    }
+    100% {
+      right: 250px;
+      top: 300px;
+    }
+  }
+  @keyframes rock {
+    0% {
+      left: 0;
+      top: 0;
+    }
+    25% {
+      left: 100px;
+      top: 0;
+    }
+    50% {
+      left: 150px;
+      top: 0;
+    }
+    75% {
+      left: 200px;
+      top: 0;
+    }
+    100% {
+      left: 250px;
+      top: 0;
+    }
+  }
+  @keyframes rockComputer {
+    0% {
+      right: 0;
+      top: 0;
+    }
+    25% {
+      right: 100px;
+      top: 0;
+    }
+    50% {
+      right: 150px;
+      top: 0;
+    }
+    75% {
+      right: 200px;
+      top: 0;
+    }
+    100% {
+      right: 250px;
+      top: 0;
+    }
+  }
+  @keyframes leaf {
+    0% {
+      left: 0;
+      bottom: 0;
+    }
+    25% {
+      left: 100px;
+      bottom: 30px;
+    }
+    50% {
+      left: 150px;
+      bottom: 60px;
+    }
+    75% {
+      left: 200px;
+      bottom: 90px;
+    }
+    100% {
+      left: 250px;
+      bottom: 220px;
+    }
+  }
+  @keyframes leafComputer {
+    0% {
+      right: 0;
+      bottom: 0;
+    }
+    25% {
+      right: 100px;
+      bottom: 30px;
+    }
+    50% {
+      right: 150px;
+      bottom: 60px;
+    }
+    75% {
+      right: 200px;
+      bottom: 90px;
+    }
+    100% {
+      right: 250px;
+      bottom: 220px;
+    }
+  }
+}
+/*==============================================================
+desktop
+================================================================ */
+@media screen and (min-width: 1200px) {
+  /* line 5, ../sass/_desktop.scss */
+  main {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  @keyframes scissors {
+    0% {
+      left: 0;
+      top: 0;
+    }
+    25% {
+      left: 100px;
+      top: 30px;
+    }
+    50% {
+      left: 150px;
+      top: 60px;
+    }
+    75% {
+      left: 200px;
+      top: 100px;
+    }
+    100% {
+      left: 350px;
+      top: 320px;
+    }
+  }
+  @keyframes scissorsComputer {
+    0% {
+      right: 0;
+      top: 0;
+    }
+    25% {
+      right: 100px;
+      top: 30px;
+    }
+    50% {
+      right: 150px;
+      top: 60px;
+    }
+    75% {
+      right: 200px;
+      top: 100px;
+    }
+    100% {
+      right: 350px;
+      top: 320px;
+    }
+  }
+  @keyframes rock {
+    0% {
+      left: 0;
+      top: 0;
+    }
+    25% {
+      left: 100px;
+      top: 0;
+    }
+    50% {
+      left: 150px;
+      top: 0;
+    }
+    75% {
+      left: 200px;
+      top: 0;
+    }
+    100% {
+      left: 350px;
+      top: 0;
+    }
+  }
+  @keyframes rockComputer {
+    0% {
+      right: 0;
+      top: 0;
+    }
+    25% {
+      right: 100px;
+      top: 0;
+    }
+    50% {
+      right: 150px;
+      top: 0;
+    }
+    75% {
+      right: 200px;
+      top: 0;
+    }
+    100% {
+      right: 350px;
+      top: 0;
+    }
+  }
+  @keyframes leaf {
+    0% {
+      left: 0;
+      bottom: 0;
+    }
+    25% {
+      left: 100px;
+      bottom: 30px;
+    }
+    50% {
+      left: 150px;
+      bottom: 60px;
+    }
+    75% {
+      left: 200px;
+      bottom: 90px;
+    }
+    100% {
+      left: 350px;
+      bottom: 320px;
+    }
+  }
+  @keyframes leafComputer {
+    0% {
+      right: 0;
+      bottom: 0;
+    }
+    25% {
+      right: 100px;
+      bottom: 30px;
+    }
+    50% {
+      right: 150px;
+      bottom: 60px;
+    }
+    75% {
+      right: 200px;
+      bottom: 90px;
+    }
+    100% {
+      right: 350px;
+      bottom: 320px;
+    }
   }
 }

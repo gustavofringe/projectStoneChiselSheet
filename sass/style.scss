@@ -71,6 +71,12 @@ main {
     font-size: 10px;
   }
   .animateRock {
+    /**
+    *
+    *animation rock user
+    *
+    *
+    **/
     animation-name: rotation, rock;
     animation-duration: 2s, 2s;
     animation-timing-function: linear;
@@ -79,6 +85,12 @@ main {
     animation-fill-mode: forwards;
   }
   .animateLeaf {
+    /*
+    *
+    *
+    *animation leaf user
+    *
+    **/
     animation-name: rotation, leaf;
     animation-duration: 2s, 2s;
     animation-timing-function: linear;
@@ -87,6 +99,13 @@ main {
     animation-fill-mode: forwards;
   }
   .animateScissors {
+    /*
+    **
+    *
+    *animation scissors user
+    *
+    *
+    */
     animation-name: rotation, scissors;
     animation-duration: 2s, 2s;
     animation-timing-function: linear;
@@ -95,6 +114,12 @@ main {
     animation-fill-mode: forwards;
   }
   .animateLeafComputer {
+    /*
+    *
+    *animation leaf computer
+    *
+    *
+    **/
     animation-name: rotationComputer, leafComputer;
     animation-duration: 2s, 2s;
     animation-timing-function: linear;
@@ -103,6 +128,12 @@ main {
     animation-fill-mode: forwards;
   }
   .animateRockComputer {
+    /*
+    *
+    *animation rock computer
+    *
+    *
+    **/
     animation-name: rotationComputer, rockComputer;
     animation-duration: 2s, 2s;
     animation-timing-function: linear;
@@ -111,6 +142,11 @@ main {
     animation-fill-mode: forwards;
   }
   .animateScissorsComputer {
+    /*
+    *
+    *animation scissors computer
+    *
+    **/
     animation-name: rotationComputer, scissorsComputer;
     animation-duration: 2s, 2s;
     animation-timing-function: linear;
@@ -304,7 +340,6 @@ main {
     background-size: 300px 200px;
     background-attachment: fixed;
     background-position: center;
-    width: 100%;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -329,12 +364,11 @@ main {
     cursor: crosshair;
   }
 }
-
+/*================================================================
+footer
+==================================================================*/
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  overflow: hidden;
   background-color: $bc;
   height: 110px;
   .container {
@@ -345,3 +379,4 @@ footer {
   }
 }
 @import "tablet";
+@import "desktop";

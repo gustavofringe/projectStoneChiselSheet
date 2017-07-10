@@ -1,0 +1,141 @@
+/*==============================================================
+desktop
+================================================================ */
+@media screen and (min-width: 1200px){
+  main{
+    width: 1200px;
+    margin: 0 auto;
+    @keyframes scissors {
+      0% {
+        left: 0;
+        top: 0
+      }
+      25% {
+        left: 100px;
+        top: 30px
+      }
+      50% {
+        left: 150px;
+        top: 60px
+      }
+      75% {
+        left: 200px;
+        top: 100px
+      }
+      100% {
+        left: 350px;
+        top: 320px
+      }
+    }
+    @keyframes scissorsComputer {
+      0% {
+        right: 0;
+        top: 0
+      }
+      25% {
+        right: 100px;
+        top: 30px
+      }
+      50% {
+        right: 150px;
+        top: 60px
+      }
+      75% {
+        right: 200px;
+        top: 100px
+      }
+      100% {
+        right: 350px;
+        top: 320px
+      }
+    }
+    @keyframes rock {
+      0% {
+        left: 0;
+        top: 0
+      }
+      25% {
+        left: 100px;
+        top: 0
+      }
+      50% {
+        left: 150px;
+        top: 0
+      }
+      75% {
+        left: 200px;
+        top: 0
+      }
+      100% {
+        left: 350px;
+        top:0
+      }
+    }
+    @keyframes rockComputer {
+      0% {
+        right: 0;
+        top: 0
+      }
+      25% {
+        right: 100px;
+        top: 0
+      }
+      50% {
+        right: 150px;
+        top: 0
+      }
+      75% {
+        right: 200px;
+        top: 0
+      }
+      100% {
+        right: 350px;
+        top: 0
+      }
+    }
+    @keyframes leaf {
+      0% {
+        left: 0;
+        bottom: 0;
+      }
+      25% {
+        left: 100px;
+        bottom: 30px
+      }
+      50% {
+        left: 150px;
+        bottom: 60px
+      }
+      75% {
+        left: 200px;
+        bottom: 90px
+      }
+      100% {
+        left: 350px;
+        bottom: 320px
+      }
+    }
+    @keyframes leafComputer {
+      0% {
+        right: 0;
+        bottom: 0;
+      }
+      25% {
+        right: 100px;
+        bottom: 30px
+      }
+      50% {
+        right: 150px;
+        bottom: 60px
+      }
+      75% {
+        right: 200px;
+        bottom: 90px
+      }
+      100% {
+        right: 350px;
+        bottom: 320px
+      }
+    }
+  }
+}
