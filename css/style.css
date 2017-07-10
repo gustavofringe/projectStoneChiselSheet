@@ -243,7 +243,7 @@ main .animateScissorsComputer {
     top: 80px;
   }
   100% {
-    left: 120px;
+    left: 100px;
     top: 140px;
   }
 }
@@ -265,8 +265,8 @@ main .animateScissorsComputer {
     top: 0;
   }
   100% {
-    right: 120px;
-    top: 20px;
+    right: 100px;
+    top: 50px;
   }
 }
 @keyframes leafComputer {
@@ -287,8 +287,8 @@ main .animateScissorsComputer {
     bottom: 50px;
   }
   100% {
-    right: 120px;
-    bottom: 60px;
+    right: 100px;
+    bottom: 40px;
   }
 }
 @keyframes scissorsComputer {
@@ -309,8 +309,8 @@ main .animateScissorsComputer {
     top: 80px;
   }
   100% {
-    right: 120px;
-    top: 140px;
+    right: 100px;
+    top: 150px;
   }
 }
 /* line 307, ../sass/style.scss */
@@ -326,51 +326,53 @@ main .elements-computer .animate {
   transform: rotate(-90deg);
   position: relative;
   display: block;
+  padding-top: 5px;
 }
-/* line 319, ../sass/style.scss */
+/* line 320, ../sass/style.scss */
 main form {
   display: flex;
   padding-top: 50px;
 }
-/* line 323, ../sass/style.scss */
+/* line 324, ../sass/style.scss */
 main form .form label {
   font-size: 10px;
 }
-/* line 326, ../sass/style.scss */
+/* line 327, ../sass/style.scss */
 main form .form label, main form .form input {
   display: block;
 }
-/* line 329, ../sass/style.scss */
+/* line 330, ../sass/style.scss */
 main form .form input {
-  width: 15px;
+  width: 35px;
   margin: 0 auto;
 }
-/* line 335, ../sass/style.scss */
+/* line 336, ../sass/style.scss */
 main .unclickable {
   pointer-events: none;
 }
-/* line 338, ../sass/style.scss */
+/* line 339, ../sass/style.scss */
 main .win, main .lose {
+  overflow: hidden;
   background-repeat: no-repeat;
   background-size: 300px 200px;
   background-attachment: fixed;
   background-position: center;
+  background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 0 !important;
   right: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.8);
 }
-/* line 350, ../sass/style.scss */
+/* line 352, ../sass/style.scss */
 main .win {
   background-image: url("../img/39260137.gif");
 }
-/* line 353, ../sass/style.scss */
+/* line 355, ../sass/style.scss */
 main .lose {
   background-image: url("../img/rivers-or-tears.gif");
 }
-/* line 356, ../sass/style.scss */
+/* line 358, ../sass/style.scss */
 main #replay {
   position: absolute;
   left: 50%;
@@ -379,19 +381,19 @@ main #replay {
   text-align: center;
   margin-top: 200px;
   color: #944949;
-  cursor: crosshair;
+  cursor: pointer;
 }
 
 /*================================================================
 footer
 ==================================================================*/
-/* line 370, ../sass/style.scss */
+/* line 372, ../sass/style.scss */
 footer {
   overflow: hidden;
   background-color: #4B697F;
   height: 110px;
 }
-/* line 375, ../sass/style.scss */
+/* line 377, ../sass/style.scss */
 footer .container p {
   line-height: 110px;
   text-align: center;

@@ -233,7 +233,7 @@ main {
       top: 80px
     }
     100% {
-      left: 120px;
+      left: 100px;
       top: 140px
     }
   }
@@ -255,8 +255,8 @@ main {
       top: 0
     }
     100% {
-      right: 120px;
-      top: 20px
+      right: 100px;
+      top: 50px;
     }
   }
   @keyframes leafComputer {
@@ -277,8 +277,8 @@ main {
       bottom: 50px
     }
     100% {
-      right: 120px;
-      bottom: 60px
+      right: 100px;
+      bottom: 40px
     }
   }
   @keyframes scissorsComputer {
@@ -299,8 +299,8 @@ main {
       top: 80px
     }
     100% {
-      right: 120px;
-      top: 140px
+      right: 100px;
+      top: 150px
     }
   }
   .elements-user {
@@ -313,7 +313,8 @@ main {
     .animate {
       @include transform (rotate(-90deg));
       position: relative;
-      display: block
+      display: block;
+      padding-top: 5px;
     }
   }
   form {
@@ -327,7 +328,7 @@ main {
         display: block;
       }
       input {
-        width: 15px;
+        width: 35px;
         margin: 0 auto;
       }
     }
@@ -336,16 +337,17 @@ main {
     pointer-events: none;
   }
   .win, .lose {
+    overflow: hidden;
     background-repeat: no-repeat;
     background-size: 300px 200px;
     background-attachment: fixed;
     background-position: center;
+    background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 0 !important;
     right: 0;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.8);
   }
   .win {
     background-image: url('../img/39260137.gif');
@@ -361,7 +363,7 @@ main {
     text-align: center;
     margin-top: 200px;
     color: #944949;
-    cursor: crosshair;
+    cursor: pointer;
   }
 }
 /*================================================================
