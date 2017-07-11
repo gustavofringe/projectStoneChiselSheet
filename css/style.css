@@ -34,9 +34,11 @@ header {
 }
 /* line 35, ../sass/style.scss */
 header h1 {
+  font-size: 15px;
+  line-height: 40px;
   text-align: center;
 }
-/* line 38, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 header #player {
   /**
   *
@@ -45,8 +47,9 @@ header #player {
   *
   **/
   text-align: center;
+  font-size: 10px;
 }
-/* line 47, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
 header #result {
   /*
   *
@@ -54,6 +57,7 @@ header #result {
   *
   */
   text-align: center;
+  font-size: 10px;
   width: 200px;
   margin: 0 auto;
 }
@@ -64,18 +68,19 @@ header #result {
 *main
 *
 */
-/* line 65, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 main {
   margin-top: 25px;
   display: flex;
   justify-content: space-around;
 }
-/* line 69, ../sass/style.scss */
+/* line 73, ../sass/style.scss */
 main h2 {
   padding-bottom: 25px;
   font-size: 10px;
+  text-align: center;
 }
-/* line 73, ../sass/style.scss */
+/* line 78, ../sass/style.scss */
 main .animateRock {
   /**
   *
@@ -90,7 +95,7 @@ main .animateRock {
   animation-play-state: unset;
   animation-fill-mode: forwards;
 }
-/* line 87, ../sass/style.scss */
+/* line 92, ../sass/style.scss */
 main .animateLeaf {
   /*
   *
@@ -105,7 +110,7 @@ main .animateLeaf {
   animation-play-state: unset;
   animation-fill-mode: forwards;
 }
-/* line 101, ../sass/style.scss */
+/* line 106, ../sass/style.scss */
 main .animateScissors {
   /*
   **
@@ -121,7 +126,7 @@ main .animateScissors {
   animation-play-state: unset;
   animation-fill-mode: forwards;
 }
-/* line 116, ../sass/style.scss */
+/* line 121, ../sass/style.scss */
 main .animateLeafComputer {
   /*
   *
@@ -136,7 +141,7 @@ main .animateLeafComputer {
   animation-play-state: unset;
   animation-fill-mode: forwards;
 }
-/* line 130, ../sass/style.scss */
+/* line 135, ../sass/style.scss */
 main .animateRockComputer {
   /*
   *
@@ -151,7 +156,7 @@ main .animateRockComputer {
   animation-play-state: unset;
   animation-fill-mode: forwards;
 }
-/* line 144, ../sass/style.scss */
+/* line 149, ../sass/style.scss */
 main .animateScissorsComputer {
   /*
   *
@@ -200,7 +205,7 @@ main .animateScissorsComputer {
   }
   100% {
     left: 120px;
-    top: 20px;
+    top: 50px;
   }
 }
 @keyframes leaf {
@@ -222,7 +227,7 @@ main .animateScissorsComputer {
   }
   100% {
     left: 120px;
-    bottom: 60px;
+    bottom: 40px;
   }
 }
 @keyframes scissors {
@@ -244,7 +249,7 @@ main .animateScissorsComputer {
   }
   100% {
     left: 100px;
-    top: 140px;
+    top: 150px;
   }
 }
 @keyframes rockComputer {
@@ -313,13 +318,14 @@ main .animateScissorsComputer {
     top: 150px;
   }
 }
-/* line 307, ../sass/style.scss */
+/* line 312, ../sass/style.scss */
 main .elements-user .animate {
   position: relative;
   display: block;
 }
-/* line 313, ../sass/style.scss */
+/* line 318, ../sass/style.scss */
 main .elements-computer .animate {
+  float: right;
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
@@ -328,74 +334,76 @@ main .elements-computer .animate {
   display: block;
   padding-top: 5px;
 }
-/* line 320, ../sass/style.scss */
+/* line 326, ../sass/style.scss */
 main form {
   display: flex;
   padding-top: 50px;
 }
-/* line 324, ../sass/style.scss */
+/* line 330, ../sass/style.scss */
 main form .form label {
   font-size: 10px;
 }
-/* line 327, ../sass/style.scss */
+/* line 333, ../sass/style.scss */
 main form .form label, main form .form input {
   display: block;
 }
-/* line 330, ../sass/style.scss */
+/* line 336, ../sass/style.scss */
 main form .form input {
   width: 35px;
   margin: 0 auto;
 }
-/* line 336, ../sass/style.scss */
+/* line 342, ../sass/style.scss */
 main .unclickable {
   pointer-events: none;
 }
-/* line 339, ../sass/style.scss */
-main .win, main .lose {
+
+/* line 348, ../sass/style.scss */
+#replay {
+  text-align: center;
+  margin-top: 160px;
+  font-size: 30px;
+  color: #944949;
+  cursor: pointer;
+}
+
+/* line 355, ../sass/style.scss */
+.win, .lose {
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: 300px 200px;
-  background-attachment: fixed;
   background-position: center;
   background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 120%;
   position: absolute;
   left: 0;
   bottom: 0 !important;
   right: 0;
   top: 0;
 }
-/* line 354, ../sass/style.scss */
-main .win {
+
+/* line 370, ../sass/style.scss */
+.win {
   background-image: url("../img/39260137.gif");
 }
-/* line 357, ../sass/style.scss */
-main .lose {
+
+/* line 373, ../sass/style.scss */
+.lose {
   background-image: url("../img/rivers-or-tears.gif");
-}
-/* line 360, ../sass/style.scss */
-main #replay {
-  position: absolute;
-  left: 50%;
-  width: 100px;
-  margin-left: -50px;
-  text-align: center;
-  margin-top: 200px;
-  color: #944949;
-  cursor: pointer;
 }
 
 /*================================================================
 footer
 ==================================================================*/
-/* line 376, ../sass/style.scss */
+/* line 379, ../sass/style.scss */
 footer {
   overflow: hidden;
   background-color: #4B697F;
-  height: 110px;
+  height: 65px;
 }
-/* line 381, ../sass/style.scss */
+/* line 384, ../sass/style.scss */
 footer .container p {
-  line-height: 110px;
+  line-height: 65px;
   text-align: center;
 }
 
@@ -722,6 +730,11 @@ desktop
     width: 1200px;
     margin: 0 auto;
   }
+  /* line 9, ../sass/_desktop.scss */
+  main .elements-user .animate, main .elements-computer .animate {
+    width: 200px;
+    height: 200px;
+  }
   @keyframes scissors {
     0% {
       left: 0;
@@ -740,7 +753,7 @@ desktop
       top: 100px;
     }
     100% {
-      left: 350px;
+      left: 450px;
       top: 320px;
     }
   }
@@ -762,7 +775,7 @@ desktop
       top: 100px;
     }
     100% {
-      right: 350px;
+      right: 450px;
       top: 320px;
     }
   }
@@ -784,7 +797,7 @@ desktop
       top: 0;
     }
     100% {
-      left: 350px;
+      left: 450px;
       top: 0;
     }
   }
@@ -806,7 +819,7 @@ desktop
       top: 0;
     }
     100% {
-      right: 350px;
+      right: 450px;
       top: 0;
     }
   }
@@ -828,8 +841,8 @@ desktop
       bottom: 90px;
     }
     100% {
-      left: 350px;
-      bottom: 320px;
+      left: 450px;
+      bottom: 120px;
     }
   }
   @keyframes leafComputer {
@@ -850,8 +863,8 @@ desktop
       bottom: 90px;
     }
     100% {
-      right: 350px;
-      bottom: 320px;
+      right: 450px;
+      bottom: 120px;
     }
   }
 }

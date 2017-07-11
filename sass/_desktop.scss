@@ -5,6 +5,12 @@ desktop
   main{
     width: 1200px;
     margin: 0 auto;
+    .elements-user, .elements-computer{
+      .animate{
+        width: 200px;
+        height: 200px;
+      }
+    }
     @keyframes scissors {
       0% {
         left: 0;
@@ -23,7 +29,7 @@ desktop
         top: 100px
       }
       100% {
-        left: 350px;
+        left: 450px;
         top: 320px
       }
     }
@@ -45,7 +51,7 @@ desktop
         top: 100px
       }
       100% {
-        right: 350px;
+        right: 450px;
         top: 320px
       }
     }
@@ -67,7 +73,7 @@ desktop
         top: 0
       }
       100% {
-        left: 350px;
+        left: 450px;
         top:0
       }
     }
@@ -89,7 +95,7 @@ desktop
         top: 0
       }
       100% {
-        right: 350px;
+        right: 450px;
         top: 0
       }
     }
@@ -111,8 +117,8 @@ desktop
         bottom: 90px
       }
       100% {
-        left: 350px;
-        bottom: 320px
+        left: 450px;
+        bottom: 120px
       }
     }
     @keyframes leafComputer {
@@ -133,8 +139,8 @@ desktop
         bottom: 90px
       }
       100% {
-        right: 350px;
-        bottom: 320px
+        right: 450px;
+        bottom: 120px
       }
     }
   }

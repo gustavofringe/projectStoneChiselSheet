@@ -56,8 +56,7 @@ var leafComputer = document.getElementById('leafComputer');
 var result = document.getElementById('result');
 document.getElementById('user').value = 0;
 document.getElementById('computer').value = 0;
-var win = document.getElementById('win');
-var lose = document.getElementById('lose');
+var end = document.getElementById('end');
 /**
  *
  * scissor function
@@ -65,6 +64,7 @@ var lose = document.getElementById('lose');
  *
  * */
 scissors.onclick = function () {
+    scissors.classList.add('unclickable');
     leaf.classList.add('unclickable');
     rock.classList.add('unclickable');
     userChoice = this.alt;
@@ -72,13 +72,14 @@ scissors.onclick = function () {
     generateComputer();
     winner();
     setTimeout(function () {
-        leaf.classList.toggle('unclickable')
+        leaf.classList.toggle('unclickable');
     }, 3000);
     setTimeout(function () {
-        scissors.classList.toggle('animateScissors')
+        scissors.classList.toggle('animateScissors');
     }, 3000);
     setTimeout(function () {
-        rock.classList.toggle('unclickable')
+        rock.classList.toggle('unclickable');
+        scissors.classList.remove('unclickable');
     }, 3000);
     haveWin();
 }
@@ -89,6 +90,7 @@ scissors.onclick = function () {
  *
  * */
 leaf.onclick = function () {
+    leaf.classList.add('unclickable');
     scissors.classList.add('unclickable');
     rock.classList.add('unclickable');
     userChoice = this.alt
@@ -96,13 +98,14 @@ leaf.onclick = function () {
     generateComputer();
     winner();
     setTimeout(function () {
-        leaf.classList.toggle('animateLeaf')
+        leaf.classList.toggle('animateLeaf');
     }, 3000);
     setTimeout(function () {
-        scissors.classList.toggle('unclickable')
+        scissors.classList.toggle('unclickable');
     }, 3000);
     setTimeout(function () {
-        rock.classList.toggle('unclickable')
+        rock.classList.toggle('unclickable');
+        leaf.classList.remove('unclickable');
     }, 3000);
     haveWin();
 }
@@ -113,6 +116,7 @@ leaf.onclick = function () {
  *
  * */
 rock.onclick = function () {
+    rock.classList.add('unclickable')
     leaf.classList.add('unclickable');
     scissors.classList.add('unclickable');
     userChoice = this.alt;
@@ -120,13 +124,14 @@ rock.onclick = function () {
     generateComputer();
     winner();
     setTimeout(function () {
-        leaf.classList.toggle('unclickable')
+        leaf.classList.toggle('unclickable');
     }, 3000);
     setTimeout(function () {
-        scissors.classList.toggle('unclickable')
+        scissors.classList.toggle('unclickable');
     }, 3000);
     setTimeout(function () {
-        rock.classList.toggle('animateRock')
+        rock.classList.toggle('animateRock');
+        rock.classList.remove('unclickable');
     }, 3000);
     haveWin();
 }
@@ -238,10 +243,10 @@ var haveWin = function () {
             audio.pause();
         }, 3000)
         setTimeout(function () {
-            win.classList.add('win');
+            end.classList.add('win');
         }, 3000)
         setTimeout(function () {
-            win.insertAdjacentHTML('afterbegin', '<div id="replay" onClick="window.location.reload()">Rejouer</div>')
+            end.insertAdjacentHTML('afterbegin', '<div id="replay" onClick="window.location.reload()">Rejouer</div>')
         }, 3000)
     }
     if (computerChance === 3) {
@@ -249,10 +254,10 @@ var haveWin = function () {
             audio.pause();
         }, 3000)
         setTimeout(function () {
-            lose.classList.add('lose');
+            end.classList.add('lose');
         }, 3000)
         setTimeout(function () {
-            lose.insertAdjacentHTML('afterbegin', '<div id="replay" onClick="window.location.reload()">Rejouer</div>')
+            end.insertAdjacentHTML('afterbegin', '<div id="replay" onClick="window.location.reload()">Rejouer</div>')
         }, 3000)
     }
 }
