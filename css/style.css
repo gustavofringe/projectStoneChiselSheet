@@ -357,9 +357,6 @@ main .win, main .lose {
   background-size: 300px 200px;
   background-attachment: fixed;
   background-position: center;
-}
-/* line 347, ../sass/style.scss */
-main .end {
   background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
   left: 0;
@@ -367,15 +364,15 @@ main .end {
   right: 0;
   top: 0;
 }
-/* line 355, ../sass/style.scss */
+/* line 354, ../sass/style.scss */
 main .win {
   background-image: url("../img/39260137.gif");
 }
-/* line 358, ../sass/style.scss */
+/* line 357, ../sass/style.scss */
 main .lose {
   background-image: url("../img/rivers-or-tears.gif");
 }
-/* line 361, ../sass/style.scss */
+/* line 360, ../sass/style.scss */
 main #replay {
   position: absolute;
   left: 50%;
@@ -390,13 +387,13 @@ main #replay {
 /*================================================================
 footer
 ==================================================================*/
-/* line 375, ../sass/style.scss */
+/* line 376, ../sass/style.scss */
 footer {
   overflow: hidden;
   background-color: #4B697F;
   height: 110px;
 }
-/* line 380, ../sass/style.scss */
+/* line 381, ../sass/style.scss */
 footer .container p {
   line-height: 110px;
   text-align: center;

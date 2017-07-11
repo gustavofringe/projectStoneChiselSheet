@@ -58,7 +58,6 @@ document.getElementById('user').value = 0;
 document.getElementById('computer').value = 0;
 var win = document.getElementById('win');
 var lose = document.getElementById('lose');
-var end = document.getElementById('end');
 /**
  *
  * scissor function
@@ -240,7 +239,6 @@ var haveWin = function () {
         }, 3000)
         setTimeout(function () {
             win.classList.add('win');
-            end.classList.add('end');
         }, 3000)
         setTimeout(function () {
             win.insertAdjacentHTML('afterbegin', '<div id="replay" onClick="window.location.reload()">Rejouer</div>')
@@ -252,7 +250,6 @@ var haveWin = function () {
         }, 3000)
         setTimeout(function () {
             lose.classList.add('lose');
-            end.classList.add('end');
         }, 3000)
         setTimeout(function () {
             lose.insertAdjacentHTML('afterbegin', '<div id="replay" onClick="window.location.reload()">Rejouer</div>')

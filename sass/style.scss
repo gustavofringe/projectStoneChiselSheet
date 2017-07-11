@@ -342,16 +342,15 @@ main {
     background-size: 300px 200px;
     background-attachment: fixed;
     background-position: center;
-
-  }
-  .end{
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
     left: 0;
     bottom: 0 !important;
     right: 0;
     top: 0;
+
   }
+
   .win {
     background-image: url('../img/39260137.gif');
   }
@@ -368,6 +367,8 @@ main {
     color: #944949;
     cursor: pointer;
   }
+}
+.end{
 }
 /*================================================================
 footer
