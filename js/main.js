@@ -12,7 +12,7 @@ document.title = "Pierre|Feuille|Ciseaux";
 function url() {
     history.pushState({
         path: this.path
-    }, '', 'pierre-feuille-ciseaux');
+    }, 'index.html', 'pierre-feuille-ciseaux');
 }
 url();
 /**
