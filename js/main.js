@@ -9,32 +9,32 @@ document.title = "Pierre|Feuille|Ciseaux";
  * change url
  *
  * */
-function url() {
+/*function url() {
     history.pushState({
         path: this.path
     }, '', 'pierre-feuille-ciseaux');
 }
-url();
+url();*/
 /**
  *
  *
  * load player name
  *
  * */
-/*
+
 (function () {
  var user = prompt('Quel est ton prénom ?').toLowerCase();
  document.getElementById("player").innerHTML = "Bienvenue "+user+" pret pour jouer au pierre, feuille, ciseaux?"
- })();*/
+ })();
 /**
  *
  * charge play song
  *
  *
  * */
-/*
+
  var audio = new Audio('../song/Rocky.mp3');
- audio.play();*/
+ audio.play();
  /**
   *
   *
