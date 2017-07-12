@@ -12,7 +12,7 @@ document.title = "Pierre|Feuille|Ciseaux";
 function url() {
     history.pushState({
         path: this.path
-    }, 'index.html', 'pierre-feuille-ciseaux');
+    }, '/projectStoneChiselSheet/index.html', 'pierre-feuille-ciseaux');
 }
 url();
 /**
